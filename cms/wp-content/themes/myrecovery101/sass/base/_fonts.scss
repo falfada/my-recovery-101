@@ -1,3 +1,117 @@
 /**
  * Fonts.
  */
+$font-serif: "freight-big-pro", serif;
+$font-sans-serif: "Montserrat", sans-serif;
+
+.ff-serif{
+  font-family: $font-serif;
+  font-style: italic;
+}
+/**
+ * Fonts Size.
+ */
+$font-sizes: (
+  "4xl": 48px,
+  "3xl": 64px,
+  "2xl": 40px,
+  "xl": 32px,
+  "lg": 24px,
+  "md": 20px,
+  "sm": 16px,
+);
+
+@each $size, $value in $font-sizes {
+  .fs-#{$size} {
+    font-size: $value;
+  }
+}
+
+$font-sizes-serif: (
+  "xl": 70px,
+  "md": 80px,
+);
+
+@each $size, $value in $font-sizes-serif {
+  .fs-serif-#{$size} {
+    font-size: $value;
+  }
+}
+
+@media (min-width: $screen_md) {
+  $font-sizes: (
+    "4xl": 96px,
+    "3xl": 64px,
+    "2xl": 40px,
+    "xl": 32px,
+    "lg": 24px,
+    "md": 20px,
+    "sm": 16px,
+  );
+  $font-sizes-serif: (
+    "xl": 160px,
+    "md": 80px,
+  );
+}
+/**
+  * Text alignment.
+  */
+
+$text-align-values: (center, left, right);
+
+@each $alignment in $text-align-values {
+  .text-#{$alignment} {
+    text-align: $alignment;
+  }
+}
+
+/**
+ * Fonts Weight.
+ */
+ 
+$font-weight: (
+  "regular": 400,
+  "semibold": 600,
+  "bold": 700
+);
+
+@each $weight, $value in $font-weight {
+  .fw-#{$weight} {
+    font-weight: $value;
+  }
+}
+
+/**
+ * Text Colors.
+ */
+.text{
+  &-white{
+    color: $white;
+  }
+  &-black{
+    color: $black;
+  }
+  &-cyan{
+    color: $cyan;
+  }
+  &-light-cyan{
+    color: $light-cyan;
+  }
+  &-teal{
+    color: $teal;
+  }
+  &-light-teal{
+    color: $light-teal;
+  }
+  &-lavender{
+    color: $lavender;
+  }
+  &-purple{
+    color: $purple;
+  }
+  &-peach{
+    color: $peach;
+  }
+}
+
+

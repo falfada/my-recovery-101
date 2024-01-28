@@ -2,11 +2,21 @@
  * Colors.
  */
 $white: #ffffff;
-$black: #111111;
+$black: #333745;
+$cyan: #85DBE0;
+$light-cyan: #DAF4F6;
+$teal: #275A5C;
+$light-teal: #43959D;
+$lavender: #C7ACD7;
+$purple: #6A2875;
+$peach: #DFC5AE;
+
 
 /**
- * Fonts.
+ * Hamburger icon.
  */
-$font-content: '';
-$font-button: '';
-$font-heading: '';
+$hamburger-menu-size: 60px;
+$hamburger-menu-border-radius: 0.12em;
+$hamburger-menu-line-height: 2px;
+$hover-line-height: $hamburger-menu-line-height;
+$anim-duration: 0.4s;

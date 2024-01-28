@@ -2,24 +2,90 @@
  * Mixins.
  */
 
+  /**
+  * To Rem Function.
+  */
+
+@function toRem($value) {
+  $remValue: ($value / 16) + rem; 
+  @return $remValue;
+}
+
 /*Screen sizes. */
 $screen_sm: '576px';
 $screen_md: '768px';
 $screen_lg: '992px';
 $screen_xl: '1200px';
-$screen_xxl: '1400px';
+$screen_2xl: '1400px';
 
-@media (max-width: $screen_sm) {
+@media (min-width: $screen_sm) {
 }
 
-@media (max-width: $screen_md) {
+@media (min-width: $screen_md) {
 }
 
-@media (max-width: $screen_lg) {
+@media (min-width: $screen_lg) {
 }
 
-@media (max-width: $screen_xl) {
+@media (min-width: $screen_xl) {
 }
 
-@media (max-width: $screen_xxl) {
+@media (min-width: $screen_2xl) {
 }
+
+/**
+ * Flexbox.
+ */
+ @mixin d-flex($justify-content: null) {
+    display: flex;
+    flex-wrap: wrap;
+    @if $justify-content {
+      justify-content: $justify-content;
+    }
+  }
+  
+  $justify-options: (center, space-between, space-evenly, space-around);
+  
+  @each $option in $justify-options {
+    .justify-#{$option} {
+      @include d-flex($option);
+    }
+  }
+
+ 
+
+ /**
+ * Grid.
+ */
+ @mixin grid-container($columns: null) {
+    display: grid;
+    @if $columns {
+      grid-template-columns: repeat($columns, 1fr);
+    }
+  }
+ 
+@for $i from 1 through 12 {
+  .grid-col-#{$i} {
+    @include grid-container($i);
+  }
+}
+
+
+.gap{
+  &-16{
+    gap: toRem(16);
+  }
+  &-24{
+    gap: toRem(24);
+  }
+  &-32{
+    gap: toRem(32);
+  }
+  &-40{
+    gap: toRem(40);
+  }
+  &-48{
+    gap: toRem(40);
+  }
+}
+

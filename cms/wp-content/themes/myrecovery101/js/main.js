@@ -1,3 +1,4 @@
+
 /**
  * JS using Revealing Module Pattern.
  */

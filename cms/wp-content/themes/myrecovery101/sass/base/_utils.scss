@@ -5,10 +5,43 @@
   text-transform: uppercase;
 }
 
-.centering {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  flex-direction: column;
+/**
+  * Display.
+  */
+  .d{
+    &-desktop{
+      visibility: hidden;
+    }
+  }
+
+ /**
+  * Text alignment.
+  */
+
+  $text-align-values: (
+    center,
+    left,
+    right,
+  );
+  
+  
+  @each $alignment in $text-align-values {
+    .text-#{$alignment} {
+      text-align: $alignment;
+    }
+  }
+  /**
+  * Layout.
+  */
+
+.container{
+  width: 95%;
+  margin: auto;
+}
+@media (min-width: $screen_md) {
+  .d{
+    &-desktop{
+      visibility: visible;
+    }
+  }
 }

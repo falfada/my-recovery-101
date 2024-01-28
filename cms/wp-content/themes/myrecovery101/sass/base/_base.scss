@@ -5,11 +5,12 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  margin: 0;
 }
 
 body {
   color: $black;
-  font-family: $font-content;
+  font-family: $font-sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-synthesis: none;
@@ -25,7 +26,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $font-heading;
+  font-family: $font-sans-serif;
   margin-top: 0;
 }
 
@@ -36,4 +37,8 @@ a {
 img {
   height: auto;
   max-width: 100%;
+}
+ul, ol{
+  list-style-type: none;
+  padding: 0;
 }
