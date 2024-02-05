@@ -7,7 +7,7 @@ header {
     text-indent: 100%;
     white-space: nowrap;
     overflow: hidden;
-    background: url("../img/logo.png") no-repeat center center;
+    background: url("../img/general/logo.png") no-repeat center center;
     background-size: cover;
     width: 7.5rem;
     height: 4rem;
@@ -274,7 +274,7 @@ header {
     }
   }
 }
-@media (min-width: $screen_md) {
+@media (min-width: $screen_lg) {
   header {
     display: flex;
     justify-content: space-between;

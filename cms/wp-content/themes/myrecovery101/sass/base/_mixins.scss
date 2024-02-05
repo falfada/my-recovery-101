@@ -36,21 +36,20 @@ $screen_2xl: '1400px';
 /**
  * Flexbox.
  */
- @mixin d-flex($justify-content: null) {
-    display: flex;
-    flex-wrap: wrap;
-    @if $justify-content {
-      justify-content: $justify-content;
-    }
-  }
-  
-  $justify-options: (center, space-between, space-evenly, space-around);
-  
+    
   @each $option in $justify-options {
     .justify-#{$option} {
-      @include d-flex($option);
+      justify-content: $option
     }
   }
+
+  
+  @each $option in $align-items {
+    .align-#{$option} {
+      align-items: $option
+    }
+  }
+
 
  
 
@@ -63,29 +62,54 @@ $screen_2xl: '1400px';
       grid-template-columns: repeat($columns, 1fr);
     }
   }
- 
+ /**
+ * Grid Columns.
+ */
 @for $i from 1 through 12 {
   .grid-col-#{$i} {
     @include grid-container($i);
   }
 }
 
-
-.gap{
-  &-16{
-    gap: toRem(16);
-  }
-  &-24{
-    gap: toRem(24);
-  }
-  &-32{
-    gap: toRem(32);
-  }
-  &-40{
-    gap: toRem(40);
-  }
-  &-48{
-    gap: toRem(40);
+/**
+ * Grid Gap.
+ */
+@for $i from 1 through 6 {
+  $value: $i * 8;
+  .gap-#{$value} {
+    gap: toRem($value);
   }
 }
 
+
+@media (min-width: $screen_sm) {
+  @for $i from 1 through 12 {
+    .grid-col-sm-#{$i} {
+      @include grid-container($i);
+    }
+  }
+  
+  @for $i from 1 through 6 {
+    $value: $i * 8;
+    .gap-sm-#{$value} {
+      gap: toRem($value);
+    }
+  }
+}
+
+@media (min-width: $screen_xl) {
+  @for $i from 1 through 6 {
+    $value: $i * 8;
+    .gap-xl-#{$value} {
+      gap: toRem($value);
+    }
+  }
+}
+
+/**
+ * Columns.
+ */
+
+@mixin column-width($col-span) {
+  width: calc((100% / #{$column-count}) * #{$col-span});
+}

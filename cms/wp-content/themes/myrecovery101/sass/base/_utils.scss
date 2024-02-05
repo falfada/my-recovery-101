@@ -4,7 +4,60 @@
 .uppercase {
   text-transform: uppercase;
 }
-
+.underline{
+  &-black{
+    position: relative;
+    &:after{
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      background: $black;
+      width: 100%;
+      height: 1px;
+    }
+    text-decoration: underline;
+    text-decoration-color: $black;
+  }
+  &-cyan{
+    text-decoration: underline;
+    text-decoration-color: $cyan;
+  }
+  &-light-cyan{
+    text-decoration: underline;
+    text-decoration-color: $light-cyan;
+  }
+  &-teal{
+    text-decoration: underline;
+    text-decoration-color: $teal;
+  }
+  &-light-teal{
+    text-decoration: underline;
+    text-decoration-color: $light-teal;
+  }
+  &-lavender{
+    position: relative;
+    display: inline-block;
+  
+    &:after{
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      background: $lavender;
+      width: 100%;
+      height: 1px;
+    }
+  }
+  &-purple{
+    text-decoration: underline;
+    text-decoration-color: $purple;
+  }
+  &-peach{
+    text-decoration: underline;
+    text-decoration-color: $peach;
+  }
+}
 /**
   * Display.
   */
@@ -12,8 +65,16 @@
     &-desktop{
       visibility: hidden;
     }
+    &-flex{
+      display: flex;
+      flex-wrap: wrap;
+    }
+    &-inline-flex{
+      display: inline-flex;
+      flex-wrap: wrap;
+    }
   }
-
+ 
  /**
   * Text alignment.
   */
@@ -38,10 +99,50 @@
   width: 95%;
   margin: auto;
 }
+
+/**
+  * Columns.
+  */
+@for $i from 1 through $column-count {
+  .col-#{$i} {
+    @include column-width($i);
+  }
+}
 @media (min-width: $screen_md) {
+  /**
+  * Columns.
+  */
+  @for $i from 1 through $column-count {
+    .col-md-#{$i} {
+      @include column-width($i);
+    }
+  }
+}
+
+@media (min-width: $screen_lg) {
+  /**
+  * Columns.
+  */
+  @for $i from 1 through $column-count {
+    .col-lg-#{$i} {
+      @include column-width($i);
+    }
+  }
+/**
+  * Display Desktop.
+  */
   .d{
     &-desktop{
       visibility: visible;
     }
+  }
+}
+
+@media (min-width: $screen_2xl) {
+  /**
+  * Layout.
+  */
+  .container{
+    max-width: 1644px;
   }
 }

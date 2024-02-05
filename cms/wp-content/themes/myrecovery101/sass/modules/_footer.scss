@@ -1,3 +1,33 @@
 /**
  * Footer.
  */
+footer {
+  width: 100%;
+  padding: toRem(48) 0 toRem(40) 0;
+  background: url("../img/general/m-footer-bg.jpg") center no-repeat;
+  background-size: cover;
+  a.logo {
+    display: inline-block;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    background: url("../img/general/logo.png") no-repeat center center;
+    background-size: cover;
+    width: 7.5rem;
+    height: 4rem;
+  }
+}
+@media (min-width: $screen_sm) {
+    footer{
+        background: url("../img/general/footer-bg.jpg") center no-repeat;
+        a.logo{
+            width: toRem(246);
+            height: toRem(150);
+        }
+    }
+}
+@media (min-width: $screen_xl) {
+  footer{
+    padding: toRem(72) 0 toRem(96) 0;
+  }
+}

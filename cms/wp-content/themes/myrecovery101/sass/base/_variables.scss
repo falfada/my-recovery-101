@@ -20,3 +20,20 @@ $hamburger-menu-border-radius: 0.12em;
 $hamburger-menu-line-height: 2px;
 $hover-line-height: $hamburger-menu-line-height;
 $anim-duration: 0.4s;
+
+/**
+ * Flexbox.
+ */
+ $justify-options: (center, space-between, space-evenly, space-around);
+ $align-items: (center, flex-end, flex-start, baseline);
+
+ /**
+ * Fonts.
+ */
+$font-serif: "freight-big-pro", serif;
+$font-sans-serif: "Montserrat", sans-serif;
+
+/**
+ * Columns.
+ */
+$column-count: 12;

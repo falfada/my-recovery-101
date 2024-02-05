@@ -1,0 +1,114 @@
+/**
+ * Spacing.
+ */
+ .m-auto{
+  margin-left: auto;
+  margin-right: auto;
+ }
+@for $i from 1 through 15 {
+  $value: $i * 8;
+
+  /**
+ * Margin Top.
+ */
+  .mt-#{$value} {
+    margin-top: toRem($value);
+  }
+
+  /**
+ * Padding on x axis.
+ */
+  .px-#{$value} {
+    padding-right: toRem($value);
+    padding-left: toRem($value);
+  }
+  /**
+ * Padding on y axis.
+ */
+  .py-#{$value} {
+    padding-top: toRem($value);
+    padding-bottom: toRem($value);
+  }
+}
+
+@media (min-width: $screen_md) {
+  @for $i from 1 through 15 {
+    $value: $i * 8;
+  
+    /**
+   * Margin Top.
+   */
+    .mt-md-#{$value} {
+      margin-top: toRem($value);
+    }
+  
+    /**
+   * Padding on x axis.
+   */
+    .px-md-#{$value} {
+      padding-right: toRem($value);
+      padding-left: toRem($value);
+    }
+    /**
+   * Padding on y axis.
+   */
+    .py-md-#{$value} {
+      padding-top: toRem($value);
+      padding-bottom: toRem($value);
+    }
+  }
+}
+@media (min-width: $screen_lg) {
+  @for $i from 1 through 15 {
+    $value: $i * 8;
+  
+    /**
+   * Margin Top.
+   */
+    .mt-lg-#{$value} {
+      margin-top: toRem($value);
+    }
+  
+    /**
+   * Padding on x axis.
+   */
+    .px-lg-#{$value} {
+      padding-right: toRem($value);
+      padding-left: toRem($value);
+    }
+    /**
+   * Padding on y axis.
+   */
+    .py-lg-#{$value} {
+      padding-top: toRem($value);
+      padding-bottom: toRem($value);
+    }
+  }
+}
+@media (min-width: $screen_xl) {
+  @for $i from 1 through 15 {
+    $value: $i * 8;
+  
+    /**
+   * Margin Top.
+   */
+    .mt-xl-#{$value} {
+      margin-top: toRem($value);
+    }
+  
+    /**
+   * Padding on x axis.
+   */
+    .px-xl-#{$value} {
+      padding-right: toRem($value);
+      padding-left: toRem($value);
+    }
+    /**
+   * Padding on y axis.
+   */
+    .py-xl-#{$value} {
+      padding-top: toRem($value);
+      padding-bottom: toRem($value);
+    }
+  }
+}

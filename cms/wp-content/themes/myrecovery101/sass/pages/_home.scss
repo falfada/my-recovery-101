@@ -1,3 +1,119 @@
 /**
  * Home page.
  */
+.hero{
+    img{
+        margin-top: -3rem;
+    }
+}
+.about-home{
+    background: url("../img/general/m-waves-bg.jpg") center no-repeat;
+    background-size: cover;
+    padding: toRem(200) 0 toRem(48) 0;
+    margin-top: toRem(-160);
+}
+.services-home{
+    background: $light-cyan;
+    padding: toRem(48) 0 toRem(180) 0;
+}
+.slick-next, .slick-prev{
+    &:before{
+        color: $cyan;
+    }
+}
+.contact-container{
+    border-radius: 12px;
+    box-shadow: rgba(41, 132, 137, 0.2) 0 -5px 20px;
+    background: $white;
+    margin-top: toRem(-150);
+    padding: toRem(94)toRem(24) toRem(80) toRem(24);
+    position: relative;
+    overflow: hidden;
+    &:before{
+        content: '';
+        width: toRem(100);
+        height: toRem(134);
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: url('../img/general/leaves_left-bg.png') center no-repeat;
+        background-size: cover;
+    }
+    &:after{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background: url('../img/general/leaves_right-bg.png') center no-repeat;
+        width: toRem(125);
+        height: toRem(145);
+        background-size: cover;
+    }
+}
+.testimonials-slider{
+    .slick-prev, .slick-next{
+        top: initial;
+        bottom: 0;
+        transform: translate(0);
+        z-index: 2;
+    }
+    .slick-next{
+        right: 0;
+    }
+    .slick-prev{
+        right: toRem(48);
+        left: initial;
+    }
+}
+@media (min-width: $screen_md) {
+    .hero{
+        img{
+            margin-top: -7rem;
+        }
+    }
+    .about-home{
+        background: url("../img/general/waves-bg.jpg") center no-repeat;
+    }
+    .contact-container{
+        padding: toRem(94)toRem(72) toRem(80) toRem(72);
+        &:before{
+            width: toRem(148);
+            height: toRem(200);
+        }
+        &:after{
+            width: toRem(172);
+            height: toRem(200);
+        }
+    }
+}
+
+@media (min-width: $screen_lg) {
+    .hero{
+        div.button-container{
+            margin-top: toRem(-160);
+        }
+    }
+    .about-home{
+        padding: toRem(280) 0 toRem(96) 0;
+    }
+    .contact-container{
+        margin-top: toRem(-100);
+    }
+}
+
+@media (min-width: $screen_xl) {
+    .hero{
+        img{
+            margin-top: -17rem;
+        }
+        div.button-container{
+            margin-top: toRem(-350);
+        }
+    }
+    .about-home{
+        padding: toRem(450) 0 toRem(120) 0;
+    }
+    .contact-container{
+        padding: toRem(80);
+    }
+}

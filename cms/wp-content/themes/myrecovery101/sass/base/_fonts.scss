@@ -1,10 +1,7 @@
 /**
  * Fonts.
  */
-$font-serif: "freight-big-pro", serif;
-$font-sans-serif: "Montserrat", sans-serif;
-
-.ff-serif{
+.ff-serif {
   font-family: $font-serif;
   font-style: italic;
 }
@@ -12,46 +9,84 @@ $font-sans-serif: "Montserrat", sans-serif;
  * Fonts Size.
  */
 $font-sizes: (
-  "4xl": 48px,
-  "3xl": 64px,
-  "2xl": 40px,
-  "xl": 32px,
-  "lg": 24px,
-  "md": 20px,
-  "sm": 16px,
+  "4xl": 48,
+  "3xl": 40,
+  "2xl": 32,
+  "xl": 28,
+  "lg": 20,
+  "md": 18,
+  "sm": 14,
 );
 
 @each $size, $value in $font-sizes {
   .fs-#{$size} {
-    font-size: $value;
+    font-size: toRem($value);
   }
 }
 
 $font-sizes-serif: (
-  "xl": 70px,
-  "md": 80px,
+  "xl": 70,
+  "md": 45,
 );
 
 @each $size, $value in $font-sizes-serif {
   .fs-serif-#{$size} {
-    font-size: $value;
+    font-size: toRem($value);
   }
 }
 
 @media (min-width: $screen_md) {
-  $font-sizes: (
-    "4xl": 96px,
-    "3xl": 64px,
-    "2xl": 40px,
-    "xl": 32px,
-    "lg": 24px,
-    "md": 20px,
-    "sm": 16px,
-  );
-  $font-sizes-serif: (
-    "xl": 160px,
-    "md": 80px,
-  );
+  .fs {
+    &-4xl {
+      font-size: toRem(80);
+    }
+    &-3xl {
+      font-size: toRem(56);
+    }
+    &-2xl {
+      font-size: toRem(40);
+    }
+    &-xl {
+      font-size: toRem(32);
+    }
+    &-lg {
+      font-size: toRem(24);
+    }
+    &-md {
+      font-size: toRem(20);
+    }
+    &-sm {
+      font-size: toRem(16);
+    }
+    &-serif {
+      &-xl {
+        font-size: toRem(120);
+      }
+      &-md{
+        font-size: toRem(70);
+      }
+      
+    }
+  }
+}
+
+@media (min-width: $screen_xl) {
+  .fs {
+    &-4xl {
+      font-size: toRem(96);
+    }
+    &-3xl {
+      font-size: toRem(64);
+    }
+    &-serif {
+      &-xl {
+        font-size: toRem(160);
+      }
+      &-md {
+        font-size: toRem(80);
+      }
+    }
+  }
 }
 /**
   * Text alignment.
@@ -68,11 +103,11 @@ $text-align-values: (center, left, right);
 /**
  * Fonts Weight.
  */
- 
+
 $font-weight: (
   "regular": 400,
   "semibold": 600,
-  "bold": 700
+  "bold": 700,
 );
 
 @each $weight, $value in $font-weight {
@@ -84,34 +119,47 @@ $font-weight: (
 /**
  * Text Colors.
  */
-.text{
-  &-white{
+.text {
+  &-white {
     color: $white;
   }
-  &-black{
+  &-black {
     color: $black;
   }
-  &-cyan{
+  &-cyan {
     color: $cyan;
   }
-  &-light-cyan{
+  &-light-cyan {
     color: $light-cyan;
   }
-  &-teal{
+  &-teal {
     color: $teal;
   }
-  &-light-teal{
+  &-light-teal {
     color: $light-teal;
   }
-  &-lavender{
+  &-lavender {
     color: $lavender;
   }
-  &-purple{
+  &-purple {
     color: $purple;
   }
-  &-peach{
+  &-peach {
     color: $peach;
   }
 }
 
-
+/**
+ * Line Height.
+ */
+.line {
+  &-1 {
+    line-height: 1;
+  }
+  &-2 {
+    line-height: 1.5;
+  }
+  &-3 {
+    line-height: 2;
+  }
+}
