@@ -1,4 +1,17 @@
 
+/**
+ * Reveal Text on scroll.
+ */
+gsap.registerPlugin(ScrollTrigger);
+const splitTypes = document.querySelectorAll('.text-reveal');
+
+splitTypes.forEach((char,i) =>{
+
+});
+
+/**
+ * Slider Testimonials.
+ */
 $('.testimonials-slider').slick({
   infinite: true,
 });

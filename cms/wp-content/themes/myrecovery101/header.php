@@ -41,7 +41,7 @@
             <li><a href="<?= home_url('/services/') ?>" data-replace="Services" class="nav-link uppercase text-md text-black fw-semibold"><span>Services</span></a></li>
             <li><a href="<?= home_url('/resources/') ?>" data-replace="Resources" class="nav-link uppercase text-md text-black fw-semibold"><span>Resources</span></a></li>
             <li><a href="<?= home_url('/community-hub/') ?>" data-replace="Our Community" class="nav-link uppercase text-md text-black fw-semibold"><span>Our Community</span></a></li>
-            <li><a href="<?= home_url('/contact/') ?>" class="button uppercase fw-semibold">Contact Us</a></li>
+            <li><a href="<?= home_url('/contact-us/') ?>" class="button uppercase fw-semibold">Contact Us</a></li>
         </ul>
         <div class="outer-menu">
             <input class="checkbox-toggle" type="checkbox" />

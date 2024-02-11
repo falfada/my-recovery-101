@@ -81,7 +81,7 @@
                             </g>
                         </svg>
                     </div>
-            
+
                     <div class="slick-slider testimonials-slider">
                         <div>
                             <blockquote class="fs-md">
@@ -112,7 +112,7 @@
 
     <section class="container contact-container text-center">
         <h2 class="fs-3xl">Reach out today and <span class="fs-serif-md ff-serif">start your journey</span> towards a brighter, healthier future</h2>
-        <a href="#" class="button circle uppercase mt-24 fw-semibold"><span>CONTACT US</span></button>
+        <a href="#" class="button circle uppercase mt-24 fw-semibold"><span>CONTACT US</span></a>
     </section>
 <?php else : ?>
     <?php if (have_posts()) :
