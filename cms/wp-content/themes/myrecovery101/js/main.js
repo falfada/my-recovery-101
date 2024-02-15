@@ -1,24 +1,73 @@
-
 /**
- * Reveal Text on scroll.
+ * Reveal Text About Us on Scroll.
  */
 gsap.registerPlugin(ScrollTrigger);
-const splitTypes = document.querySelectorAll('.text-reveal');
 
-splitTypes.forEach((char,i) =>{
+if ($("#about-text").length) {
+  let typeSplit;
 
+  function runSplit() {
+    typeSplit = new SplitType(".split-word", {
+      types: "lines, words",
+    });
+    $(".word").append("<div class='line-mask'></div>");
+    createAnimation();
+  }
+
+  runSplit();
+
+  function createAnimation() {
+    let allMasks = $(".word")
+      .map(function () {
+        return $(this).find(".line-mask");
+      })
+      .get();
+
+    let tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".split-word",
+        start: "top center",
+        end: "bottom center",
+        scroller: "#about-text",
+        scrub: 1,
+      },
+    });
+
+    tl.to(allMasks, {
+      width: "0%",
+      duration: 1,
+      stagger: 0.5,
+    });
+  }
+}
+
+/**
+ * Widen Image Resources.
+ */
+const growTl = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#grow",
+    scrub: 1.5,
+    start: "top center",
+    end: "+=400",
+    ease: "power1.out",
+  },
+});
+growTl.to("#grow", {
+  duration: 1,
+  scale: 1,
 });
 
 /**
  * Slider Testimonials.
  */
-$('.testimonials-slider').slick({
+$(".testimonials-slider").slick({
   infinite: true,
 });
 /**
  * Slider Home.
  */
-$('.services-slider').slick({
+$(".services-slider").slick({
   infinite: true,
   slidesToShow: 3,
   slidesToScroll: 3,
@@ -27,18 +76,17 @@ $('.services-slider').slick({
       breakpoint: 992,
       settings: {
         slidesToShow: 2,
-        slidesToScroll: 2
-      }
+        slidesToScroll: 2,
+      },
     },
     {
       breakpoint: 480,
       settings: {
         slidesToShow: 1,
-        slidesToScroll: 1
-      }
-    }
-
-  ]
+        slidesToScroll: 1,
+      },
+    },
+  ],
 });
 
 /**
@@ -54,11 +102,11 @@ textYear.innerHTML = currentYear;
 
 const App = (() => {
   /** DOM Elements. */
-  const body = document.querySelector('body');
+  const body = document.querySelector("body");
 
   /** Events. */
   const events = () => {
-    console.log('Load main.js file!');
+    console.log("Load main.js file!");
   };
 
   return {
