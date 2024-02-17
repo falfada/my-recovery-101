@@ -1,4 +1,54 @@
 /**
+ * Team Slider.
+ */
+$('.team-slider').slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1
+      }
+    },
+    {
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 2
+      }
+    },
+    {
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 3
+      }
+    }
+  ]
+});
+
+/**
+ * Team Popup.
+ */
+$('.team-member').click(function() {
+  let name = $(this).data('name');
+  let position = $(this).data('position');
+  let description = $(this).data('description');
+  let imageSrc = $(this).find('img').attr('src');
+
+  $('.popup-content img').attr('src', imageSrc);
+  $('.popup-content h3').text(name);
+  $('.popup-content .position').text(position);
+  $('.popup-content .description').text(description);
+
+  $('.popup').fadeIn();
+});
+
+$('.close-icon').click(function() {
+  $('.popup').fadeOut();
+});
+
+
+/**
  * Reveal Text About Us on Scroll.
  */
 gsap.registerPlugin(ScrollTrigger);
@@ -15,48 +65,50 @@ if ($("#about-text").length) {
   }
 
   runSplit();
-
   function createAnimation() {
     let allMasks = $(".word")
       .map(function () {
         return $(this).find(".line-mask");
       })
       .get();
-
+  
     let tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".split-word",
         start: "top center",
         end: "bottom center",
-        scroller: "#about-text",
         scrub: 1,
+        scroller: window.innerWidth > 1024 ? "#about-text" : window,
       },
     });
+  
 
+  
     tl.to(allMasks, {
       width: "0%",
       duration: 1,
       stagger: 0.5,
     });
   }
+  
 }
 
 /**
  * Widen Image Resources.
  */
-const growTl = gsap.timeline({
-  scrollTrigger: {
-    trigger: "#grow",
-    scrub: 1.5,
-    start: "top center",
-    end: "+=400",
-    ease: "power1.out",
-  },
-});
-growTl.to("#grow", {
-  duration: 1,
-  scale: 1,
-});
+// const growTl = gsap.timeline({
+//   scrollTrigger: {
+//     trigger: "#grow",
+//     scrub: 1.5,
+//     start: "top center",
+//     end: "+=400",
+//     ease: "power1.out",
+//   },
+// });
+// growTl.to("#grow", {
+//   duration: 1,
+//   scale: 1,
+// });
 
 /**
  * Slider Testimonials.

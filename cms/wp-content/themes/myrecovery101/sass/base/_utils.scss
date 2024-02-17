@@ -64,6 +64,7 @@
   .d{
     &-desktop{
       visibility: hidden;
+      display: none;
     }
     &-flex{
       display: flex;
@@ -135,6 +136,12 @@
     &-desktop{
       visibility: visible;
     }
+    &-lg{
+      &-flex{
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
   }
 }
 
@@ -144,5 +151,11 @@
   */
   .container{
     max-width: 1644px;
+  }
+
+  @for $i from 1 through $column-count {
+    .col-2xl-#{$i} {
+      @include column-width($i);
+    }
   }
 }

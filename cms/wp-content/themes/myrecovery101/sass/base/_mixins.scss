@@ -97,7 +97,28 @@ $screen_2xl: '1400px';
   }
 }
 
+@media (min-width: $screen_md) {
+  @for $i from 1 through 12 {
+    .grid-col-md-#{$i} {
+      @include grid-container($i);
+    }
+  }
+}
+
+@media (min-width: $screen_lg) {
+  @for $i from 1 through 12 {
+    .grid-col-lg-#{$i} {
+      @include grid-container($i);
+    }
+  }
+}
+
 @media (min-width: $screen_xl) {
+  @for $i from 1 through 12 {
+    .grid-col-xl-#{$i} {
+      @include grid-container($i);
+    }
+  }
   @for $i from 1 through 6 {
     $value: $i * 8;
     .gap-xl-#{$value} {

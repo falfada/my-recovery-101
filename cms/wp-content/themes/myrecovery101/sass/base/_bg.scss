@@ -1,0 +1,17 @@
+.wavy-bg{
+    background: url(../img/general/mobile-wavy_background.png) center no-repeat;
+    background-size: 100% auto;
+}
+.blue-bg{
+    background: $cyan;
+}
+.lightblue-bg{
+    background: $light-cyan;
+}
+@media (min-width: $screen_md) {
+    .wavy-bg{
+        background: url(../img/general/desktop-wavy_background.png) center no-repeat;
+        background-size: 100% auto;
+    }
+    
+}

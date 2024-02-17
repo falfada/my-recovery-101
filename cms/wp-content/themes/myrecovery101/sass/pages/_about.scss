@@ -1,13 +1,76 @@
 .word {
-    position: relative;
+  position: relative;
+}
+.line-mask {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: $white;
+  opacity: 0.8;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+.icon_white_circle{
+  width: toRem(48);
+  height: toRem(48);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $white;
+  border-radius: 50%;
+  margin: auto;
+  img{
+    width: 50%;
   }
-  .line-mask {
-    position: absolute;
-    top: 0;
-    right: 0;
-    background-color: $white;
-    opacity: 0.8;
-    height: 100%;
-    width: 100%;
-    z-index: 2;
+}
+
+.image_mask{
+  width: toRem(200);
+  height: toRem(200);
+  overflow: hidden;
+  margin: auto;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.team-slider{
+  .slick-next{
+    right: toRem(24);
   }
+  .slick-prev{
+    left: toRem(24);
+  }
+}
+@media (min-width: $screen_lg) {
+  #about-text {
+    overflow: scroll;
+    height: 36vw;
+    padding-bottom: 14rem;
+    flex-direction: row-reverse;
+  }
+  .about {
+    &-image {
+      position: absolute;
+      top: toRem(250);
+      left: 0;
+    }
+  }
+}
+
+@media (min-width: $screen_xl) {
+  #about-text{
+    padding-bottom: 20rem;
+  }
+  .about{
+    &-image{
+      top: toRem(300);
+    }
+  }
+}
+@media (min-width: $screen_2xl) {
+  #about-text{
+    padding-bottom: 25rem;
+  }
+}

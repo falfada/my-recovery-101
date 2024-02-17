@@ -36,7 +36,7 @@
 <body <?php body_class() ?>>
     <header class="container">
         <h1><a href="<?= home_url() ?>" class="logo">My Recovery 101</a></h1>
-        <ul class="d-flex text-center d-desktop gap-24 gap-xl-40">
+        <ul class="d-lg-flex text-center d-desktop gap-24 gap-xl-40">
             <li><a href="<?= home_url('/about-us/') ?>" data-replace="About Us" class="nav-link uppercase text-md text-black fw-semibold"><span>About Us</span></a></li>
             <li><a href="<?= home_url('/services/') ?>" data-replace="Services" class="nav-link uppercase text-md text-black fw-semibold"><span>Services</span></a></li>
             <li><a href="<?= home_url('/resources/') ?>" data-replace="Resources" class="nav-link uppercase text-md text-black fw-semibold"><span>Resources</span></a></li>

@@ -27,6 +27,7 @@ $font-sizes: (
 $font-sizes-serif: (
   "xl": 70,
   "md": 45,
+  "sm": 28,
 );
 
 @each $size, $value in $font-sizes-serif {
@@ -65,6 +66,9 @@ $font-sizes-serif: (
       &-md{
         font-size: toRem(70);
       }
+      &-sm{
+        font-size: toRem(40);
+      }
       
     }
   }
@@ -84,6 +88,9 @@ $font-sizes-serif: (
       }
       &-md {
         font-size: toRem(80);
+      }
+      &-sm{
+        font-size: toRem(40);
       }
     }
   }
