@@ -2621,3 +2621,5 @@ footer {
 @media (min-width: 1400px) {
   #about-text {
     padding-bottom: 25rem; } }
+.services-slider .slick-slide {
+  margin-right: 1rem; }

@@ -1,52 +1,70 @@
 /**
+ * Services.
+ */
+
+$(document).ready(function () {
+  if ($(window).width() < 768) {
+    $(".services-slider").slick({});
+  } else {
+    let target = $(".services-slider");
+
+    if (target.hasClass("slick-initialized")) {
+      console.log("tengo el poder de la clase");
+      target.unslick();
+    }
+  }
+  
+});
+
+
+/**
  * Team Slider.
  */
-$('.team-slider').slick({
+$(".team-slider").slick({
   slidesToShow: 3,
   slidesToScroll: 1,
   responsive: [
     {
       breakpoint: 768,
       settings: {
-        slidesToShow: 1
-      }
+        slidesToShow: 1,
+      },
     },
     {
       breakpoint: 992,
       settings: {
-        slidesToShow: 2
-      }
+        slidesToShow: 2,
+      },
     },
     {
       breakpoint: 1200,
       settings: {
-        slidesToShow: 3
-      }
-    }
-  ]
+        slidesToShow: 3,
+      },
+    },
+  ],
 });
 
 /**
  * Team Popup.
  */
-$('.team-member').click(function() {
-  let name = $(this).data('name');
-  let position = $(this).data('position');
-  let description = $(this).data('description');
-  let imageSrc = $(this).find('img').attr('src');
+$(".team-member").click(function () {
+  let name = $(this).data("name");
+  let position = $(this).data("position");
+  let description = $(this).data("description");
+  let imageSrc = $(this).find("img").attr("src");
 
-  $('.popup-content img').attr('src', imageSrc);
-  $('.popup-content h3').text(name);
-  $('.popup-content .position').text(position);
-  $('.popup-content .description').text(description);
+  $(".popup-content img").attr("src", imageSrc);
+  $(".popup-content h3").text(name);
+  $(".popup-content .position").text(position);
+  $(".popup-content .description").text(description);
 
-  $('.popup').fadeIn();
+  $(".popup").fadeIn();
 });
 
-$('.close-icon').click(function() {
-  $('.popup').fadeOut();
+$(".close-icon").click(function () {
+  $(".popup").fadeOut();
 });
-
 
 /**
  * Reveal Text About Us on Scroll.
@@ -71,7 +89,7 @@ if ($("#about-text").length) {
         return $(this).find(".line-mask");
       })
       .get();
-  
+
     let tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".split-word",
@@ -81,16 +99,13 @@ if ($("#about-text").length) {
         scroller: window.innerWidth > 1024 ? "#about-text" : window,
       },
     });
-  
 
-  
     tl.to(allMasks, {
       width: "0%",
       duration: 1,
       stagger: 0.5,
     });
   }
-  
 }
 
 /**

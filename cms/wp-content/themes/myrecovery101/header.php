@@ -52,11 +52,11 @@
                 <div>
                     <div>
                         <ul>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Services</a></li>
-                            <li><a href="#">Resources</a></li>
-                            <li><a href="#">Our Community</a></li>
-                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="<?= home_url('/about-us/') ?>">About Us</a></li>
+                            <li><a href="<?= home_url('/services/') ?>">Services</a></li>
+                            <li><a href="<?= home_url('/resources/') ?>">Resources</a></li>
+                            <li><a href="<?= home_url('/community-hub/') ?>">Our Community</a></li>
+                            <li><a href="<?= home_url('/contact-us/') ?>">Contact Us</a></li>
                         </ul>
                     </div>
                 </div>
