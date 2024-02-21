@@ -1,16 +1,28 @@
+
+
+$(document).ready(function () {
+/**
+   * Form Input.
+   */
+$("#fileInput").change(function () {
+  let parentContainer = $(this).parent();
+  let labelForFile = parentContainer.siblings("label");
+  let textToDisplay = $("#fileInput")[0].files[0].name;
+  let newParagraph = `<p class="fileName">${textToDisplay}</p>`;
+  labelForFile.after(newParagraph);
+});
+
 /**
  * Services.
  */
 
-$(document).ready(function () {
   if ($(window).width() < 768) {
     $(".services-slider").slick({});
   } else {
     let target = $(".services-slider");
-
+    console.log(target);
     if (target.hasClass("slick-initialized")) {
-      console.log("tengo el poder de la clase");
-      target.unslick();
+      target.slick("unslick");
     }
   }
   

@@ -270,7 +270,7 @@ you.">
         <div class="popup-info">
             <h3 class="fs-lg fw-regular"></h3>
             <p class="position fw-bold fs-sm mt-8"></p>
-            <p class="description fs-sm mt-16 line-3"></p>
+            <p class="description fs-sm mt-16 line-3bb"></p>
         </div>
     </div>
 </div>

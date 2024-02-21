@@ -1,0 +1,193 @@
+.input {
+  &-border {
+    width: 100%;
+    padding: toRem(8) 0;
+    margin: 0;
+    border: none;
+    border-bottom: 1px solid $cyan;
+    border-radius: 0;
+    font-size: map-get($font-sizes, "md") + px;
+    transition: all 0.3 ease;
+    &::placeholder {
+      color: rgba($black, 0.5);
+    }
+    &:hover {
+      border-bottom-width: 2px;
+    }
+    &:focus-visible {
+      border: none;
+      border-bottom: 1px solid $teal;
+      outline: none;
+    }
+  }
+  &-select {
+    width: 100%;
+    appearance: none;
+    border: none;
+    border-bottom: 1px solid $cyan;
+    padding: toRem(8) 0;
+    font-size: map-get($font-sizes, "md") + px;
+    color: rgba($black, 0.5);
+    &-container {
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        background: url(../img/general/arrow-icon.svg) center no-repeat;
+        top: 50%;
+        right: toRem(8);
+        transform: translateY(-50%);
+      }
+    }
+    &:focus-visible {
+      border: none;
+      border-bottom: 1px solid $teal;
+      outline: none;
+    }
+  }
+  &-textarea {
+    width: 100%;
+    height: 30vw;
+    border: none;
+    padding: toRem(8) 0;
+    border-bottom: 1px solid $cyan;
+    border-radius: 0;
+    font-size: map-get($font-sizes, "md") + px;
+    resize: none;
+    font-family: $font-sans-serif;
+    &::placeholder {
+      color: rgba($black, 0.5);
+    }
+    &:focus-visible {
+      border: none;
+      border-bottom: 1px solid $teal;
+      outline: none;
+    }
+  }
+  &-date {
+    width: 100%;
+    padding: toRem(8) 0;
+    outline: none;
+    font-family: $font-sans-serif;
+    border: none;
+    border-bottom: 1px solid $cyan;
+    font-size: map-get($font-sizes, "md") + px;
+    color: rgba($black, 0.5);
+  }
+  &-file{
+    display: none;
+  }
+}
+.custom-file-input {
+    position: relative;
+    cursor: pointer;
+    width: 100%;
+    line-height: toRem(24);
+    border: 1px dashed $cyan;
+    text-align: center;
+    border-radius: 8px;
+    border-spacing: 10px;
+    p.fileName{
+      line-height: toRem(32);
+    }
+  }
+  
+.wpcf7-form-control{
+    &.wpcf7-submit.button {
+        outline: none;
+        border: none;
+        text-transform: uppercase;
+        margin-top: toRem(24);
+      }
+      &.wpcf7-checkbox{
+        .wpcf7-list-item{
+            display: block;
+            margin: toRem(8) 0 0 0;
+        }
+      }
+      &.wpcf7-radio{
+        .wpcf7-list-item{
+            display: inline-grid;
+            margin: toRem(8) toRem(40) 0 0;
+        }
+      }
+      .wpcf7-list-item{
+          input[type="checkbox"], input[type="radio"]{
+            appearance: none;
+            background-color: $white;
+            margin: 0;
+            width: 13px;
+            height: 13px;
+            border: 1px solid $cyan;
+            border-radius: 2px;
+            transform:translateY(-0.01em);
+            display: inline-grid;
+            place-content: center;
+            &:before{
+                content: '\2713';
+                font-size: 13px;
+                color: $black;
+                width: 13px;
+                height: 13px;
+                text-align: center;
+                opacity: 0;
+                transition: 120ms opacity ease;
+                background: $cyan;
+            }
+            &:checked{
+                &:before{
+                    opacity: 1;
+                }
+            }
+        }
+      }
+}
+.horizontal-line {
+  width: toRem(80);
+  height: 2px;
+  background: $teal;
+  margin: toRem(40) auto 0 auto;
+}
+
+@media (min-width: $screen_md) {
+  .input {
+    &-textarea {
+      height: 15vw;
+    }
+  }
+  
+}
+@media (min-width: $screen_lg) {
+  .wpcf7-form-control{
+    &.wpcf7-checkbox{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: toRem(8);
+    }
+  }
+  .custom-file-input{
+    line-height: toRem(40);
+  }
+}
+@media (min-width: $screen_xl) {
+  .input {
+    &-border {
+      padding: toRem(16) 0;
+    }
+    &-select {
+      padding: toRem(16) 0;
+    }
+    &-textarea {
+      padding: toRem(16) 0;
+      height: 10vw;
+    }
+  }
+  .wpcf7-form-control{
+    &.wpcf7-checkbox{
+      grid-template-columns: repeat(5, 1fr);
+      gap: toRem(16);
+    }
+  }
+}

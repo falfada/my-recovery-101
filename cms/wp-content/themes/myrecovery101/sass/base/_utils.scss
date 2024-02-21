@@ -145,6 +145,17 @@
   }
 }
 
+@media (min-width: $screen_xl) {
+  /**
+  * Columns.
+  */
+  @for $i from 1 through $column-count {
+    .col-xl-#{$i} {
+      @include column-width($i);
+    }
+  }
+}
+
 @media (min-width: $screen_2xl) {
   /**
   * Layout.

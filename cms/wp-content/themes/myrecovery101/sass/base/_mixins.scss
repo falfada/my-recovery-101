@@ -111,6 +111,12 @@ $screen_2xl: '1400px';
       @include grid-container($i);
     }
   }
+  @for $i from 1 through 6 {
+    $value: $i * 8;
+    .gap-lg-#{$value} {
+      gap: toRem($value);
+    }
+  }
 }
 
 @media (min-width: $screen_xl) {

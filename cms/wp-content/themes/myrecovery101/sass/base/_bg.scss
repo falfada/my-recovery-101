@@ -8,10 +8,47 @@
 .lightblue-bg{
     background: $light-cyan;
 }
+.referral-bg{
+    background: $light-cyan url(../img/general/mobile-blue-wavy.png) center no-repeat;
+    position: relative;
+    background-size: 100% auto;
+    padding: toRem(40) 0 toRem(56) 0;
+    &::after{
+        content: '';
+        width: toRem(176);
+        height: toRem(192);
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background: url(../img/general/leaves-referral.png) center no-repeat;
+        background-size: cover;
+    }
+}
 @media (min-width: $screen_md) {
     .wavy-bg{
         background: url(../img/general/desktop-wavy_background.png) center no-repeat;
         background-size: 100% auto;
     }
+    .referral-bg{
+        background: $light-cyan url(../img/general/blue-wavy.png) center no-repeat;
+        background-size: cover;
+    }
     
+}
+@media (min-width: $screen_lg) {
+    .referral-bg{
+        &::after{
+            width: toRem(288);
+            height: toRem(320);
+        }
+    }
+}
+
+@media (min-width: $screen_xl) {
+    .referral-bg{
+        &::after{
+            width: toRem(368);
+            height: toRem(400);
+        }
+    }
 }

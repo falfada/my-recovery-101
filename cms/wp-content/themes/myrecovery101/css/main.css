@@ -301,7 +301,25 @@
 
   .grid-col-lg-12 {
     display: grid;
-    grid-template-columns: repeat(12, 1fr); } }
+    grid-template-columns: repeat(12, 1fr); }
+
+  .gap-lg-8 {
+    gap: 0.5rem; }
+
+  .gap-lg-16 {
+    gap: 1rem; }
+
+  .gap-lg-24 {
+    gap: 1.5rem; }
+
+  .gap-lg-32 {
+    gap: 2rem; }
+
+  .gap-lg-40 {
+    gap: 2.5rem; }
+
+  .gap-lg-48 {
+    gap: 3rem; } }
 @media (min-width: 1200px) {
   .grid-col-xl-1 {
     display: grid;
@@ -767,6 +785,45 @@ ul, ol {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap; } }
+@media (min-width: 1200px) {
+  /**
+  * Columns.
+  */
+  .col-xl-1 {
+    width: calc((100% / 12) * 1); }
+
+  .col-xl-2 {
+    width: calc((100% / 12) * 2); }
+
+  .col-xl-3 {
+    width: calc((100% / 12) * 3); }
+
+  .col-xl-4 {
+    width: calc((100% / 12) * 4); }
+
+  .col-xl-5 {
+    width: calc((100% / 12) * 5); }
+
+  .col-xl-6 {
+    width: calc((100% / 12) * 6); }
+
+  .col-xl-7 {
+    width: calc((100% / 12) * 7); }
+
+  .col-xl-8 {
+    width: calc((100% / 12) * 8); }
+
+  .col-xl-9 {
+    width: calc((100% / 12) * 9); }
+
+  .col-xl-10 {
+    width: calc((100% / 12) * 10); }
+
+  .col-xl-11 {
+    width: calc((100% / 12) * 11); }
+
+  .col-xl-12 {
+    width: calc((100% / 12) * 12); } }
 @media (min-width: 1400px) {
   /**
   * Layout.
@@ -815,6 +872,26 @@ ul, ol {
 .m-auto {
   margin-left: auto;
   margin-right: auto; }
+
+ /**
+* Margin Top.
+*/
+.mt-0 {
+  margin-top: 0rem; }
+
+ /**
+* Padding on x axis.
+*/
+.px-0 {
+  padding-right: 0rem;
+  padding-left: 0rem; }
+
+ /**
+* Padding on y axis.
+*/
+.py-0 {
+  padding-top: 0rem;
+  padding-bottom: 0rem; }
 
  /**
 * Margin Top.
@@ -1120,6 +1197,26 @@ ul, ol {
  /**
 * Margin Top.
 */
+  .mt-md-0 {
+    margin-top: 0rem; }
+
+ /**
+* Padding on x axis.
+*/
+  .px-md-0 {
+    padding-right: 0rem;
+    padding-left: 0rem; }
+
+ /**
+* Padding on y axis.
+*/
+  .py-md-0 {
+    padding-top: 0rem;
+    padding-bottom: 0rem; }
+
+ /**
+* Margin Top.
+*/
   .mt-md-8 {
     margin-top: 0.5rem; }
 
@@ -1420,6 +1517,26 @@ ul, ol {
  /**
 * Margin Top.
 */
+  .mt-lg-0 {
+    margin-top: 0rem; }
+
+ /**
+* Padding on x axis.
+*/
+  .px-lg-0 {
+    padding-right: 0rem;
+    padding-left: 0rem; }
+
+ /**
+* Padding on y axis.
+*/
+  .py-lg-0 {
+    padding-top: 0rem;
+    padding-bottom: 0rem; }
+
+ /**
+* Margin Top.
+*/
   .mt-lg-8 {
     margin-top: 0.5rem; }
 
@@ -1717,6 +1834,26 @@ ul, ol {
     padding-top: 7.5rem;
     padding-bottom: 7.5rem; } }
 @media (min-width: 1200px) {
+ /**
+* Margin Top.
+*/
+  .mt-xl-0 {
+    margin-top: 0rem; }
+
+ /**
+* Padding on x axis.
+*/
+  .px-xl-0 {
+    padding-right: 0rem;
+    padding-left: 0rem; }
+
+ /**
+* Padding on y axis.
+*/
+  .py-xl-0 {
+    padding-top: 0rem;
+    padding-bottom: 0rem; }
+
  /**
 * Margin Top.
 */
@@ -2081,10 +2218,37 @@ ul, ol {
 .lightblue-bg {
   background: #DAF4F6; }
 
+.referral-bg {
+  background: #DAF4F6 url(../img/general/mobile-blue-wavy.png) center no-repeat;
+  position: relative;
+  background-size: 100% auto;
+  padding: 2.5rem 0 3.5rem 0; }
+  .referral-bg::after {
+    content: '';
+    width: 11rem;
+    height: 12rem;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: url(../img/general/leaves-referral.png) center no-repeat;
+    background-size: cover; }
+
 @media (min-width: 768px) {
   .wavy-bg {
     background: url(../img/general/desktop-wavy_background.png) center no-repeat;
-    background-size: 100% auto; } }
+    background-size: 100% auto; }
+
+  .referral-bg {
+    background: #DAF4F6 url(../img/general/blue-wavy.png) center no-repeat;
+    background-size: cover; } }
+@media (min-width: 992px) {
+  .referral-bg::after {
+    width: 18rem;
+    height: 20rem; } }
+@media (min-width: 1200px) {
+  .referral-bg::after {
+    width: 23rem;
+    height: 25rem; } }
 /**
  * Modules files.
  */
@@ -2449,6 +2613,170 @@ footer {
 @media (min-width: 1200px) {
   footer {
     padding: 4.5rem 0 6rem 0; } }
+.input-border {
+  width: 100%;
+  padding: 0.5rem 0;
+  margin: 0;
+  border: none;
+  border-bottom: 1px solid #85DBE0;
+  border-radius: 0;
+  font-size: 18px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease; }
+  .input-border::-webkit-input-placeholder {
+    color: rgba(51, 55, 69, 0.5); }
+  .input-border:-ms-input-placeholder {
+    color: rgba(51, 55, 69, 0.5); }
+  .input-border::-ms-input-placeholder {
+    color: rgba(51, 55, 69, 0.5); }
+  .input-border::placeholder {
+    color: rgba(51, 55, 69, 0.5); }
+  .input-border:hover {
+    border-bottom-width: 2px; }
+  .input-border:focus-visible {
+    border: none;
+    border-bottom: 1px solid #275A5C;
+    outline: none; }
+.input-select {
+  width: 100%;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  border-bottom: 1px solid #85DBE0;
+  padding: 0.5rem 0;
+  font-size: 18px;
+  color: rgba(51, 55, 69, 0.5); }
+  .input-select-container {
+    position: relative; }
+    .input-select-container::after {
+      content: "";
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      background: url(../img/general/arrow-icon.svg) center no-repeat;
+      top: 50%;
+      right: 0.5rem;
+      -webkit-transform: translateY(-50%);
+              transform: translateY(-50%); }
+  .input-select:focus-visible {
+    border: none;
+    border-bottom: 1px solid #275A5C;
+    outline: none; }
+.input-textarea {
+  width: 100%;
+  height: 30vw;
+  border: none;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #85DBE0;
+  border-radius: 0;
+  font-size: 18px;
+  resize: none;
+  font-family: "Montserrat", sans-serif; }
+  .input-textarea::-webkit-input-placeholder {
+    color: rgba(51, 55, 69, 0.5); }
+  .input-textarea:-ms-input-placeholder {
+    color: rgba(51, 55, 69, 0.5); }
+  .input-textarea::-ms-input-placeholder {
+    color: rgba(51, 55, 69, 0.5); }
+  .input-textarea::placeholder {
+    color: rgba(51, 55, 69, 0.5); }
+  .input-textarea:focus-visible {
+    border: none;
+    border-bottom: 1px solid #275A5C;
+    outline: none; }
+.input-date {
+  width: 100%;
+  padding: 0.5rem 0;
+  outline: none;
+  font-family: "Montserrat", sans-serif;
+  border: none;
+  border-bottom: 1px solid #85DBE0;
+  font-size: 18px;
+  color: rgba(51, 55, 69, 0.5); }
+.input-file {
+  display: none; }
+
+.custom-file-input {
+  position: relative;
+  cursor: pointer;
+  width: 100%;
+  line-height: 1.5rem;
+  border: 1px dashed #85DBE0;
+  text-align: center;
+  border-radius: 8px;
+  border-spacing: 10px; }
+  .custom-file-input p.fileName {
+    line-height: 2rem; }
+
+.wpcf7-form-control.wpcf7-submit.button {
+  outline: none;
+  border: none;
+  text-transform: uppercase;
+  margin-top: 1.5rem; }
+.wpcf7-form-control.wpcf7-checkbox .wpcf7-list-item {
+  display: block;
+  margin: 0.5rem 0 0 0; }
+.wpcf7-form-control.wpcf7-radio .wpcf7-list-item {
+  display: inline-grid;
+  margin: 0.5rem 2.5rem 0 0; }
+.wpcf7-form-control .wpcf7-list-item input[type="checkbox"], .wpcf7-form-control .wpcf7-list-item input[type="radio"] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: #ffffff;
+  margin: 0;
+  width: 13px;
+  height: 13px;
+  border: 1px solid #85DBE0;
+  border-radius: 2px;
+  -webkit-transform: translateY(-0.01em);
+          transform: translateY(-0.01em);
+  display: inline-grid;
+  place-content: center; }
+  .wpcf7-form-control .wpcf7-list-item input[type="checkbox"]:before, .wpcf7-form-control .wpcf7-list-item input[type="radio"]:before {
+    content: '\2713';
+    font-size: 13px;
+    color: #333745;
+    width: 13px;
+    height: 13px;
+    text-align: center;
+    opacity: 0;
+    -webkit-transition: 120ms opacity ease;
+    transition: 120ms opacity ease;
+    background: #85DBE0; }
+  .wpcf7-form-control .wpcf7-list-item input[type="checkbox"]:checked:before, .wpcf7-form-control .wpcf7-list-item input[type="radio"]:checked:before {
+    opacity: 1; }
+
+.horizontal-line {
+  width: 5rem;
+  height: 2px;
+  background: #275A5C;
+  margin: 2.5rem auto 0 auto; }
+
+@media (min-width: 768px) {
+  .input-textarea {
+    height: 15vw; } }
+@media (min-width: 992px) {
+  .wpcf7-form-control.wpcf7-checkbox {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem; }
+
+  .custom-file-input {
+    line-height: 2.5rem; } }
+@media (min-width: 1200px) {
+  .input-border {
+    padding: 1rem 0; }
+  .input-select {
+    padding: 1rem 0; }
+  .input-textarea {
+    padding: 1rem 0;
+    height: 10vw; }
+
+  .wpcf7-form-control.wpcf7-checkbox {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem; } }
 /**
  * Pages files.
  */
