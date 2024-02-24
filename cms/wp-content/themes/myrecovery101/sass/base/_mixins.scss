@@ -132,6 +132,19 @@ $screen_2xl: '1400px';
     }
   }
 }
+@media (min-width: $screen_2xl) {
+  @for $i from 1 through 12 {
+    .grid-col-2xl-#{$i} {
+      @include grid-container($i);
+    }
+  }
+  @for $i from 1 through 6 {
+    $value: $i * 8;
+    .gap-2xl-#{$value} {
+      gap: toRem($value);
+    }
+  }
+}
 
 /**
  * Columns.

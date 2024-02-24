@@ -169,4 +169,8 @@
       @include column-width($i);
     }
   }
+
+  .hide-2xl{
+    display: none;
+  }
 }

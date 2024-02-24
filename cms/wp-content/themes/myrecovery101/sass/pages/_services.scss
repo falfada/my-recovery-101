@@ -1,5 +1,31 @@
-.services-slider{
+.services-page-slider{
     .slick-slide{
-        margin-right: toRem(16);
+        margin-right: toRem(8);
+        margin-left: toRem(8);
     }
+    > div{
+        cursor: pointer;
+        img{
+            transition: all .3s ease;
+        }
+        &.active{
+            height: 105%;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 14px rgba(39, 90, 92, .4);
+            transition: all .3s ease;
+            img{
+                height: 100%;
+                width: auto;
+                max-width: none;
+            }
+        }
+    }
+}
+#service-details {
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }

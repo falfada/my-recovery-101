@@ -1,33 +1,90 @@
-
-
 $(document).ready(function () {
-/**
-   * Form Input.
+  /**
+   * Services Desktop.
    */
-$("#fileInput").change(function () {
-  let parentContainer = $(this).parent();
-  let labelForFile = parentContainer.siblings("label");
-  let textToDisplay = $("#fileInput")[0].files[0].name;
-  let newParagraph = `<p class="fileName">${textToDisplay}</p>`;
-  labelForFile.after(newParagraph);
+  function updateServiceDetails(title, description, link) {
+    const serviceTitle = document.getElementById("service-title");
+    const serviceDescription = document.getElementById("service-description");
+    const serviceLink = document.getElementById("link-service-details");
+  
+    serviceTitle.innerHTML = title;
+    serviceDescription.innerHTML = description;
+  
+    if (link) {
+        serviceLink.href = link;
+        serviceLink.classList.add("button", "circle", "uppercase", "fw-semibold", "mt-24");
+        serviceLink.innerHTML = "<span>LEARN MORE</span>";
+    } else {
+        serviceLink.href = "#";
+        serviceLink.classList.remove("button", "circle", "uppercase", "fw-semibold", "mt-24");
+        serviceLink.innerHTML = "";
+    }
+  
+    const serviceDetails = document.getElementById("service-details");
+    serviceDetails.style.opacity = 1;
+}
+  
+function handleServiceColumnHover() {
+    document.querySelectorAll('.services-page-slider > div').forEach(column => {
+        column.classList.remove('active');
+    });
+  
+    this.classList.add('active');
+  
+    const title = this.querySelector(".service-image").getAttribute("data-title");
+    const description = this.querySelector(".service-image").getAttribute("data-description");
+    const link = this.querySelector(".service-image").getAttribute("data-link");
+  
+    updateServiceDetails(title, description, link);
+}
+  
+const serviceColumns = document.querySelectorAll(".services-page-slider > div");
+serviceColumns.forEach(function(column) {
+    column.addEventListener("mouseenter", handleServiceColumnHover); // Change event to 'mouseenter'
 });
 
-/**
- * Services.
- */
 
-  if ($(window).width() < 768) {
-    $(".services-slider").slick({});
+  /**
+   * Form Input.
+   */
+  $("#fileInput").change(function () {
+    let parentContainer = $(this).parent();
+    let labelForFile = parentContainer.siblings("label");
+    let textToDisplay = $("#fileInput")[0].files[0].name;
+    let newParagraph = `<p class="fileName">${textToDisplay}</p>`;
+    labelForFile.after(newParagraph);
+  });
+
+  /**
+   * Services.
+   */
+
+  if ($(window).width() < 1400) {
+    $(".services-page-slider").slick({
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 992,
+          settings: {
+            slidesToShow: 1,
+          },
+        },
+        {
+          breakpoint: 1200,
+          settings: {
+            slidesToShow: 2,
+          },
+        },
+      ],
+    });
   } else {
-    let target = $(".services-slider");
-    console.log(target);
+    let target = $(".services-page-slider");
     if (target.hasClass("slick-initialized")) {
       target.slick("unslick");
     }
   }
-  
 });
-
 
 /**
  * Team Slider.

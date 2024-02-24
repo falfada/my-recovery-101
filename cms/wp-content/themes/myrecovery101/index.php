@@ -8,7 +8,7 @@
         </div>
         <img src="<?php echo get_template_directory_uri(); ?>/img/home/hands-home.png" alt="Hands holding blue heart">
         <div class="text-center button-container">
-            <a href="#" class="button circle uppercase fw-semibold"><span>CONTACT US</span></a>
+            <a href="<?= home_url('/contact-us/') ?>" class="button circle uppercase fw-semibold"><span>CONTACT US</span></a>
         </div>
     </section>
 
@@ -18,7 +18,7 @@
             <div class="col-10 m-auto">
                 <p class="mt-24 fs-lg line-3">At My Recovery 101, we have a passionate team of Support Coordinators, Psychosocial Recovery Coaches, Mental Health Nurses, and Support Workers who love helping individuals to unlock their potential and achieve their personal goals and aspirations. We understand that everyone’s recovery journey is unique, so we pride ourselves on providing a tailored and collaborative approach to every person who joins the My Recovery 101 family.</p>
                 <p class="text-right text-light-teal mt-24"><em>Laura Holdaway, Founder of My Recovery 101</em></p>
-                <a href="#" class="mt-48 button circle uppercase fw-semibold"><span>About Us</span></a>
+                <a href="<?= home_url('/about-us/') ?>" class="mt-48 button circle uppercase fw-semibold"><span>About Us</span></a>
             </div>
         </div>
     </section>
@@ -28,39 +28,39 @@
             <p class="ff-serif uppercase text-center fs-sm">OUR SERVICES</p>
             <h2 class="text-center fs-3xl">Paving the way to <span class="fs-serif-md ff-serif">your recovery</span></h2>
             <div class="services-slider col-11 m-auto mt-48 mt-lg-80">
-                <a href="#" class="text-black">
-                    <img src="image1.jpg" alt="Support Coordination Image">
+                <a href="<?= home_url('/services/#service1') ?>" class="text-black">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/home/support-coordination.jpg" alt="Support Coordination Image">
                     <p class="text-center fw-semibold fs-md">Support Coordination</p>
                 </a>
 
-                <a href="#" class="text-black">
-                    <img src="image2.jpg" alt="Recovery Coaching Image">
+                <a href="<?= home_url('/services/#service2') ?>" class="text-black">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/home/recovery-coaching.jpg" alt="Recovery Coaching Image">
                     <p class="text-center fw-semibold fs-md">Recovery Coaching</p>
                 </a>
 
-                <a href="#" class="text-black">
-                    <img src="image3.jpg" alt="Support Work Image">
+                <a href="<?= home_url('/services/#service3') ?>" class="text-black">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/home/support-work.jpg" alt="Support Work Image">
                     <p class="text-center fw-semibold fs-md">Support Work</p>
                 </a>
 
-                <a href="#" class="text-black">
-                    <img src="image4.jpg" alt="Mental Health Nurse Image">
+                <a href="<?= home_url('/services/#service4') ?>" class="text-black">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/home/mental-health-nurse.jpg" alt="Mental Health Nurse Image">
                     <p class="text-center fw-semibold fs-md">Mental Health Nurse</p>
                 </a>
 
-                <a href="#" class="text-black">
-                    <img src="image5.jpg" alt="Training Image">
+                <a href="<?= home_url('/services/#service5') ?>" class="text-black">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/home/training.jpg" alt="Training Image">
                     <p class="text-center fw-semibold fs-md">Training</p>
                 </a>
 
-                <a href="#" class="text-black">
-                    <img src="image6.jpg" alt="Our Community Hub Image">
+                <a href="<?= home_url('/services/#service6') ?>" class="text-black">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/home/community-hub.jpg" alt="Our Community Hub Image">
                     <p class="text-center fw-semibold fs-md">Our Community Hub</p>
                 </a>
             </div>
         </div>
         <div class="text-center mt-40">
-            <a href="#" class="button circle uppercase fw-semibold"><span>Explore more</span></a>
+            <a href="<?= home_url('/services/') ?>" class="button circle uppercase fw-semibold"><span>Explore more</span></a>
         </div>
         <div class="container mt-40">
             <div class="col-10 m-auto d-flex justify-space-between">
@@ -112,7 +112,7 @@
 
     <section class="container contact-container text-center">
         <h2 class="fs-3xl">Reach out today and <span class="fs-serif-md ff-serif">start your journey</span> towards a brighter, healthier future</h2>
-        <a href="#" class="button circle uppercase mt-24 fw-semibold"><span>CONTACT US</span></a>
+        <a href="<?= home_url('/contact-us/') ?>" class="button circle uppercase mt-24 fw-semibold"><span>CONTACT US</span></a>
     </section>
 <?php else : ?>
     <?php if (have_posts()) :

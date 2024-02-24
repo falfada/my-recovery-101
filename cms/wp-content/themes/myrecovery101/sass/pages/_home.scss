@@ -12,9 +12,16 @@
     padding: toRem(200) 0 toRem(48) 0;
     margin-top: toRem(-160);
 }
-.services-home{
-    background: $light-cyan;
-    padding: toRem(48) 0 toRem(180) 0;
+.services{
+    &-home{
+        background: $light-cyan;
+        padding: toRem(48) 0 toRem(180) 0;
+    }
+    &-slider{
+        .slick-slide{
+            margin-right: toRem(16);
+        }
+    }
 }
 .slick-next, .slick-prev{
     &:before{
