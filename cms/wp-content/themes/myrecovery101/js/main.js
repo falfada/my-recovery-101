@@ -1,48 +1,80 @@
 $(document).ready(function () {
   /**
+   * Categories Resources.
+   */
+  const categories = document.querySelectorAll(".category");
+
+  categories.forEach(function(category) {
+      category.addEventListener("click", function() {
+          categories.forEach(function(c) {
+              c.classList.remove("active");
+          });
+
+          category.classList.add("active");
+      });
+  });
+
+  /**
    * Services Desktop.
    */
   function updateServiceDetails(title, description, link) {
     const serviceTitle = document.getElementById("service-title");
     const serviceDescription = document.getElementById("service-description");
     const serviceLink = document.getElementById("link-service-details");
-  
+
     serviceTitle.innerHTML = title;
     serviceDescription.innerHTML = description;
-  
+
     if (link) {
-        serviceLink.href = link;
-        serviceLink.classList.add("button", "circle", "uppercase", "fw-semibold", "mt-24");
-        serviceLink.innerHTML = "<span>LEARN MORE</span>";
+      serviceLink.href = link;
+      serviceLink.classList.add(
+        "button",
+        "circle",
+        "uppercase",
+        "fw-semibold",
+        "mt-24"
+      );
+      serviceLink.innerHTML = "<span>LEARN MORE</span>";
     } else {
-        serviceLink.href = "#";
-        serviceLink.classList.remove("button", "circle", "uppercase", "fw-semibold", "mt-24");
-        serviceLink.innerHTML = "";
+      serviceLink.href = "#";
+      serviceLink.classList.remove(
+        "button",
+        "circle",
+        "uppercase",
+        "fw-semibold",
+        "mt-24"
+      );
+      serviceLink.innerHTML = "";
     }
-  
+
     const serviceDetails = document.getElementById("service-details");
     serviceDetails.style.opacity = 1;
-}
-  
-function handleServiceColumnHover() {
-    document.querySelectorAll('.services-page-slider > div').forEach(column => {
-        column.classList.remove('active');
-    });
-  
-    this.classList.add('active');
-  
-    const title = this.querySelector(".service-image").getAttribute("data-title");
-    const description = this.querySelector(".service-image").getAttribute("data-description");
-    const link = this.querySelector(".service-image").getAttribute("data-link");
-  
-    updateServiceDetails(title, description, link);
-}
-  
-const serviceColumns = document.querySelectorAll(".services-page-slider > div");
-serviceColumns.forEach(function(column) {
-    column.addEventListener("mouseenter", handleServiceColumnHover); // Change event to 'mouseenter'
-});
+  }
 
+  function handleServiceColumnHover() {
+    document
+      .querySelectorAll(".services-page-slider > div")
+      .forEach((column) => {
+        column.classList.remove("active");
+      });
+
+    this.classList.add("active");
+
+    const title =
+      this.querySelector(".service-image").getAttribute("data-title");
+    const description =
+      this.querySelector(".service-image").getAttribute("data-description");
+    const link = this.querySelector(".service-image").getAttribute("data-link");
+
+    updateServiceDetails(title, description, link);
+  }
+
+  const serviceColumns = document.querySelectorAll(
+    ".services-page-slider > div"
+  );
+  serviceColumns.forEach(function (column) {
+    column.addEventListener("mouseenter", handleServiceColumnHover); // Change event to 'mouseenter'
+  });
 
   /**
    * Form Input.
@@ -56,7 +88,7 @@ serviceColumns.forEach(function(column) {
   });
 
   /**
-   * Services.
+   * Services Mobile.
    */
 
   if ($(window).width() < 1400) {
@@ -180,19 +212,19 @@ if ($("#about-text").length) {
 /**
  * Widen Image Resources.
  */
-// const growTl = gsap.timeline({
-//   scrollTrigger: {
-//     trigger: "#grow",
-//     scrub: 1.5,
-//     start: "top center",
-//     end: "+=400",
-//     ease: "power1.out",
-//   },
-// });
-// growTl.to("#grow", {
-//   duration: 1,
-//   scale: 1,
-// });
+const growTl = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#grow",
+    scrub: 1.5,
+    start: "top center",
+    end: "+=400",
+    ease: "power1.out",
+  },
+});
+growTl.to("#grow", {
+  duration: 1,
+  scale: 1,
+});
 
 /**
  * Slider Testimonials.

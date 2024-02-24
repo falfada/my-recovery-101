@@ -33,12 +33,17 @@
 }
 
 @media (min-width: $screen_md) {
+  .m-md-auto{
+    margin-right: auto;
+    margin-left: auto;
+   }
   @for $i from 0 through 15 {
     $value: $i * 8;
   
     /**
    * Margin Top.
    */
+   
     .mt-md-#{$value} {
       margin-top: toRem($value);
     }
@@ -60,6 +65,10 @@
   }
 }
 @media (min-width: $screen_lg) {
+  .m-lg-auto{
+    margin-right: auto;
+    margin-left: auto;
+  }
   @for $i from 0 through 15 {
     $value: $i * 8;
   
@@ -87,6 +96,10 @@
   }
 }
 @media (min-width: $screen_xl) {
+  .m-xl-auto{
+    margin-right: auto;
+    margin-left: auto;
+  }
   @for $i from 0 through 15 {
     $value: $i * 8;
   
@@ -108,6 +121,38 @@
    * Padding on y axis.
    */
     .py-xl-#{$value} {
+      padding-top: toRem($value);
+      padding-bottom: toRem($value);
+    }
+  }
+}
+
+@media (min-width: $screen_2xl) {
+  .m-2xl-auto{
+    margin-right: auto;
+    margin-left: auto;
+  }
+  @for $i from 0 through 15 {
+    $value: $i * 8;
+  
+    /**
+   * Margin Top.
+   */
+    .mt-2xl-#{$value} {
+      margin-top: toRem($value);
+    }
+  
+    /**
+   * Padding on x axis.
+   */
+    .px-2xl-#{$value} {
+      padding-right: toRem($value);
+      padding-left: toRem($value);
+    }
+    /**
+   * Padding on y axis.
+   */
+    .py-2xl-#{$value} {
       padding-top: toRem($value);
       padding-bottom: toRem($value);
     }

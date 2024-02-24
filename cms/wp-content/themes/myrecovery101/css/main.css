@@ -1263,6 +1263,10 @@ ul, ol {
   padding-bottom: 7.5rem; }
 
 @media (min-width: 768px) {
+  .m-md-auto {
+    margin-right: auto;
+    margin-left: auto; }
+
  /**
 * Margin Top.
 */
@@ -1583,6 +1587,10 @@ ul, ol {
     padding-top: 7.5rem;
     padding-bottom: 7.5rem; } }
 @media (min-width: 992px) {
+  .m-lg-auto {
+    margin-right: auto;
+    margin-left: auto; }
+
  /**
 * Margin Top.
 */
@@ -1903,6 +1911,10 @@ ul, ol {
     padding-top: 7.5rem;
     padding-bottom: 7.5rem; } }
 @media (min-width: 1200px) {
+  .m-xl-auto {
+    margin-right: auto;
+    margin-left: auto; }
+
  /**
 * Margin Top.
 */
@@ -2220,6 +2232,330 @@ ul, ol {
 * Padding on y axis.
 */
   .py-xl-120 {
+    padding-top: 7.5rem;
+    padding-bottom: 7.5rem; } }
+@media (min-width: 1400px) {
+  .m-2xl-auto {
+    margin-right: auto;
+    margin-left: auto; }
+
+ /**
+* Margin Top.
+*/
+  .mt-2xl-0 {
+    margin-top: 0rem; }
+
+ /**
+* Padding on x axis.
+*/
+  .px-2xl-0 {
+    padding-right: 0rem;
+    padding-left: 0rem; }
+
+ /**
+* Padding on y axis.
+*/
+  .py-2xl-0 {
+    padding-top: 0rem;
+    padding-bottom: 0rem; }
+
+ /**
+* Margin Top.
+*/
+  .mt-2xl-8 {
+    margin-top: 0.5rem; }
+
+ /**
+* Padding on x axis.
+*/
+  .px-2xl-8 {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem; }
+
+ /**
+* Padding on y axis.
+*/
+  .py-2xl-8 {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem; }
+
+ /**
+* Margin Top.
+*/
+  .mt-2xl-16 {
+    margin-top: 1rem; }
+
+ /**
+* Padding on x axis.
+*/
+  .px-2xl-16 {
+    padding-right: 1rem;
+    padding-left: 1rem; }
+
+ /**
+* Padding on y axis.
+*/
+  .py-2xl-16 {
+    padding-top: 1rem;
+    padding-bottom: 1rem; }
+
+ /**
+* Margin Top.
+*/
+  .mt-2xl-24 {
+    margin-top: 1.5rem; }
+
+ /**
+* Padding on x axis.
+*/
+  .px-2xl-24 {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem; }
+
+ /**
+* Padding on y axis.
+*/
+  .py-2xl-24 {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem; }
+
+ /**
+* Margin Top.
+*/
+  .mt-2xl-32 {
+    margin-top: 2rem; }
+
+ /**
+* Padding on x axis.
+*/
+  .px-2xl-32 {
+    padding-right: 2rem;
+    padding-left: 2rem; }
+
+ /**
+* Padding on y axis.
+*/
+  .py-2xl-32 {
+    padding-top: 2rem;
+    padding-bottom: 2rem; }
+
+ /**
+* Margin Top.
+*/
+  .mt-2xl-40 {
+    margin-top: 2.5rem; }
+
+ /**
+* Padding on x axis.
+*/
+  .px-2xl-40 {
+    padding-right: 2.5rem;
+    padding-left: 2.5rem; }
+
+ /**
+* Padding on y axis.
+*/
+  .py-2xl-40 {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem; }
+
+ /**
+* Margin Top.
+*/
+  .mt-2xl-48 {
+    margin-top: 3rem; }
+
+ /**
+* Padding on x axis.
+*/
+  .px-2xl-48 {
+    padding-right: 3rem;
+    padding-left: 3rem; }
+
+ /**
+* Padding on y axis.
+*/
+  .py-2xl-48 {
+    padding-top: 3rem;
+    padding-bottom: 3rem; }
+
+ /**
+* Margin Top.
+*/
+  .mt-2xl-56 {
+    margin-top: 3.5rem; }
+
+ /**
+* Padding on x axis.
+*/
+  .px-2xl-56 {
+    padding-right: 3.5rem;
+    padding-left: 3.5rem; }
+
+ /**
+* Padding on y axis.
+*/
+  .py-2xl-56 {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem; }
+
+ /**
+* Margin Top.
+*/
+  .mt-2xl-64 {
+    margin-top: 4rem; }
+
+ /**
+* Padding on x axis.
+*/
+  .px-2xl-64 {
+    padding-right: 4rem;
+    padding-left: 4rem; }
+
+ /**
+* Padding on y axis.
+*/
+  .py-2xl-64 {
+    padding-top: 4rem;
+    padding-bottom: 4rem; }
+
+ /**
+* Margin Top.
+*/
+  .mt-2xl-72 {
+    margin-top: 4.5rem; }
+
+ /**
+* Padding on x axis.
+*/
+  .px-2xl-72 {
+    padding-right: 4.5rem;
+    padding-left: 4.5rem; }
+
+ /**
+* Padding on y axis.
+*/
+  .py-2xl-72 {
+    padding-top: 4.5rem;
+    padding-bottom: 4.5rem; }
+
+ /**
+* Margin Top.
+*/
+  .mt-2xl-80 {
+    margin-top: 5rem; }
+
+ /**
+* Padding on x axis.
+*/
+  .px-2xl-80 {
+    padding-right: 5rem;
+    padding-left: 5rem; }
+
+ /**
+* Padding on y axis.
+*/
+  .py-2xl-80 {
+    padding-top: 5rem;
+    padding-bottom: 5rem; }
+
+ /**
+* Margin Top.
+*/
+  .mt-2xl-88 {
+    margin-top: 5.5rem; }
+
+ /**
+* Padding on x axis.
+*/
+  .px-2xl-88 {
+    padding-right: 5.5rem;
+    padding-left: 5.5rem; }
+
+ /**
+* Padding on y axis.
+*/
+  .py-2xl-88 {
+    padding-top: 5.5rem;
+    padding-bottom: 5.5rem; }
+
+ /**
+* Margin Top.
+*/
+  .mt-2xl-96 {
+    margin-top: 6rem; }
+
+ /**
+* Padding on x axis.
+*/
+  .px-2xl-96 {
+    padding-right: 6rem;
+    padding-left: 6rem; }
+
+ /**
+* Padding on y axis.
+*/
+  .py-2xl-96 {
+    padding-top: 6rem;
+    padding-bottom: 6rem; }
+
+ /**
+* Margin Top.
+*/
+  .mt-2xl-104 {
+    margin-top: 6.5rem; }
+
+ /**
+* Padding on x axis.
+*/
+  .px-2xl-104 {
+    padding-right: 6.5rem;
+    padding-left: 6.5rem; }
+
+ /**
+* Padding on y axis.
+*/
+  .py-2xl-104 {
+    padding-top: 6.5rem;
+    padding-bottom: 6.5rem; }
+
+ /**
+* Margin Top.
+*/
+  .mt-2xl-112 {
+    margin-top: 7rem; }
+
+ /**
+* Padding on x axis.
+*/
+  .px-2xl-112 {
+    padding-right: 7rem;
+    padding-left: 7rem; }
+
+ /**
+* Padding on y axis.
+*/
+  .py-2xl-112 {
+    padding-top: 7rem;
+    padding-bottom: 7rem; }
+
+ /**
+* Margin Top.
+*/
+  .mt-2xl-120 {
+    margin-top: 7.5rem; }
+
+ /**
+* Padding on x axis.
+*/
+  .px-2xl-120 {
+    padding-right: 7.5rem;
+    padding-left: 7.5rem; }
+
+ /**
+* Padding on y axis.
+*/
+  .py-2xl-120 {
     padding-top: 7.5rem;
     padding-bottom: 7.5rem; } }
 /**
@@ -3054,3 +3390,60 @@ footer {
   opacity: 0;
   -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease; }
+
+.categories-container {
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none; }
+  .categories-container > div.container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 1.5rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .categories-container > div.container .category {
+      cursor: pointer;
+      -webkit-transition: all .3s ease;
+      transition: all .3s ease; }
+      .categories-container > div.container .category.active {
+        padding: 0.5rem 1rem;
+        border-radius: 6.25rem;
+        background: #85DBE0; }
+
+.category-type {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.5rem 1rem;
+  border-radius: 6.25rem;
+  gap: 1rem; }
+  .category-type img {
+    width: 24px; }
+  .category-type.lavender {
+    background: #C7ACD7; }
+  .category-type.peach {
+    background: #DFC5AE; }
+  .category-type.cyan {
+    background: #85DBE0; }
+  .category-type.purple {
+    background: #6A2875;
+    color: #ffffff; }
+.category-img {
+  width: 24.5625rem;
+  height: 21.8125rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block; }
+
+@media (min-width: 768px) {
+  .categories-container > div.container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; } }
