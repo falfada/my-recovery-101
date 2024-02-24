@@ -15,19 +15,29 @@ footer {
     background-size: cover;
     width: 7.5rem;
     height: 4rem;
+    &-community {
+      width: toRem(122);
+      height: toRem(160);
+      background: url("../img/general/och-logo.png") no-repeat center center;
+      background-size: cover;
+      text-indent: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      display: inline-block;
+    }
   }
 }
 @media (min-width: $screen_sm) {
-    footer{
-        background: url("../img/general/footer-bg.jpg") center no-repeat;
-        a.logo{
-            width: toRem(246);
-            height: toRem(150);
-        }
+  footer {
+    background: url("../img/general/footer-bg.jpg") center no-repeat;
+    a.logo {
+      width: toRem(246);
+      height: toRem(150);
     }
+  }
 }
 @media (min-width: $screen_xl) {
-  footer{
+  footer {
     padding: toRem(72) 0 toRem(96) 0;
   }
 }

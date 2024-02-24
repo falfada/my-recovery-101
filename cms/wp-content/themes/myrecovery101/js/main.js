@@ -1,20 +1,5 @@
 $(document).ready(function () {
   /**
-   * Categories Resources.
-   */
-  const categories = document.querySelectorAll(".category");
-
-  categories.forEach(function(category) {
-      category.addEventListener("click", function() {
-          categories.forEach(function(c) {
-              c.classList.remove("active");
-          });
-
-          category.classList.add("active");
-      });
-  });
-
-  /**
    * Services Desktop.
    */
   function updateServiceDetails(title, description, link) {
@@ -73,9 +58,65 @@ $(document).ready(function () {
     ".services-page-slider > div"
   );
   serviceColumns.forEach(function (column) {
-    column.addEventListener("mouseenter", handleServiceColumnHover); // Change event to 'mouseenter'
+    column.addEventListener("mouseenter", handleServiceColumnHover);
   });
 
+  /**
+   * Community Slider.
+   */
+  const communitySlider = document.querySelector(".community-slider");
+  let communitySliderWidth = communitySlider.offsetWidth;
+  let amountToScroll = communitySliderWidth - window.innerWidth;
+
+  const tween = gsap.to(communitySlider, {
+    x: -amountToScroll,
+    duration: 3,
+    ease: "none"
+  });
+
+  ScrollTrigger.create({
+    trigger: ".community-slider-wrapper",
+    start:"top 20%",
+    end:"+=" + amountToScroll,
+    pin:true,
+    animation:tween,
+    scrub:1
+  });
+  /**
+   * Community Weekly Calendar.
+   */
+  const currentDayIndex = new Date().getDay();
+
+  const daysOfWeek = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+
+  const currentDayID = daysOfWeek[currentDayIndex];
+
+  const currentDayColumn = document.getElementById(currentDayID);
+  currentDayColumn.classList.add("currentDay");
+  /**
+   * Categories Resources.
+   */
+  const categories = document.querySelectorAll(".category");
+
+  categories.forEach(function (category) {
+    category.addEventListener("click", function () {
+      categories.forEach(function (c) {
+        c.classList.remove("active");
+      });
+
+      category.classList.add("active");
+    });
+  });
+
+  
   /**
    * Form Input.
    */

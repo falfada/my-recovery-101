@@ -3,7 +3,7 @@
  */
 .hero{
     img{
-        margin-top: -3rem;
+        margin-top: -1rem;
     }
 }
 .about-home{
@@ -75,7 +75,7 @@
 @media (min-width: $screen_md) {
     .hero{
         img{
-            margin-top: -7rem;
+            margin-top: -3rem;
         }
     }
     .about-home{
@@ -111,7 +111,7 @@
 @media (min-width: $screen_xl) {
     .hero{
         img{
-            margin-top: -17rem;
+            margin-top: -4rem;
         }
         div.button-container{
             margin-top: toRem(-350);

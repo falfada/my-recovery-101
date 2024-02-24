@@ -36,6 +36,9 @@
   align-items: center;
 }
 .team-slider{
+  .team-member{
+    cursor: pointer;
+  }
   .slick-next{
     right: toRem(24);
   }

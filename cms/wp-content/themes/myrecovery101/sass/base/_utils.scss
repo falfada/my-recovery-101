@@ -74,6 +74,9 @@
       display: inline-flex;
       flex-wrap: wrap;
     }
+    &-block{
+      display: block;
+    }
   }
  
  /**
@@ -90,6 +93,38 @@
   @each $alignment in $text-align-values {
     .text-#{$alignment} {
       text-align: $alignment;
+    }
+  }
+
+  @media (min-width: $screen_md) {
+    @each $alignment in $text-align-values {
+      .text-md-#{$alignment} {
+        text-align: $alignment;
+      }
+    }
+  }
+
+  @media (min-width: $screen_lg) {
+    @each $alignment in $text-align-values {
+      .text-lg-#{$alignment} {
+        text-align: $alignment;
+      }
+    }
+  }
+
+  @media (min-width: $screen_xl) {
+    @each $alignment in $text-align-values {
+      .text-xl-#{$alignment} {
+        text-align: $alignment;
+      }
+    }
+  }
+
+  @media (min-width: $screen_2xl) {
+    @each $alignment in $text-align-values {
+      .text-2xl-#{$alignment} {
+        text-align: $alignment;
+      }
     }
   }
   /**

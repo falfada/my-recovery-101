@@ -6,7 +6,7 @@
 
             <h1 class="fs-4xl text-teal">EMPOWERING <span class="fs-serif-xl ff-serif">you</span> ON YOUR <span class="fs-serif-xl ff-serif">recovery journey</span></h1>
         </div>
-        <img src="<?php echo get_template_directory_uri(); ?>/img/home/hands-home.png" alt="Hands holding blue heart">
+        <img src="<?php echo get_template_directory_uri(); ?>/img/home/home-hero.png" alt="Hands holding blue heart">
         <div class="text-center button-container">
             <a href="<?= home_url('/contact-us/') ?>" class="button circle uppercase fw-semibold"><span>CONTACT US</span></a>
         </div>

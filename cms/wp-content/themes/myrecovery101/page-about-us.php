@@ -150,31 +150,17 @@ you.">
                 </div>
             </div>
 
-            <div class="team-member" data-name="Naomi Pointon" data-position="Recovery Coach / Support Coordinator" data-description="Hi there! My name is Naomi and I am a Recovery Coach/ Support Coordinator here at My
-Recovery 101. I am excited to help you create a life that works specifically for you, your
-personalised goals and individual circumstances.
-I am an internationally certified Results and Mindset Coach and passionate about supporting
-participants on their mental wellbeing journey. I am also a trained Contemporary Jeweller
-and Visual Artist and enjoy utilising creativity and self-expression as a tool for wellbeing. I
-have worked for over 4 years in program coordination support and continual professional
-development (CPD) events in the health sector and have a special interest in increasing
-access to mental health support.
-I have two beautiful, wise and creative boys, aged 10 and 5. My eldest is on the Autism
-Spectrum and having some personal experience navigating NDIS previous to joining My
-Recovery 101, I am hopeful that I can bring some value to the team.
-I am extremely approachable and thrive on working collaboratively with people from all walks
-of life and can’t wait to hear about your special interests and the things that are important to
-you.">
+            <div class="team-member" data-name="Cecilia" data-position="Recovery Coach / Support Coordinator" data-description="Hi I'm Cecilia but everyone calls me CC :) I’m passionate about supporting and empowering others to live their best lives! I’m from a Project Management background originally so I am organised and get things done as quickly as possible. I have a particular passion for mental health support since I was little as my mother used to lead a Charity focusing on Schizophrenia and supporting individuals and families so I've grown up in a very supportive and inclusive environment. Since then I've trained in a variety of mental health disorders and I volunteered as the Mental Health First Aider at my previous organisation. I am originally from Sweden but moved to the UK when I was young, and then moved to Australia recently to begin my next adventure. I am a mum of two busy children (three if I count my husband in that…) and in my spare time I like to dabble in creative pursuits such as crafts or baking which helps me to relax. I like to think that I am friendly and approachable, so if there is anything you would like to know please get in touch.">
                 <div class="image_mask">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/about/naomi.jpg" alt="Team Member 1">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/about/cecilia.jpg" alt="Team Member 1">
                 </div>
                 <div class="text-center mt-16">
-                    <h4 class="fs-lg fw-regular">Naomi Pointon</h4>
+                    <h4 class="fs-lg fw-regular">Cecilia</h4>
                     <p class="fw-bold fs-sm mt-8">Recovery Coach / Support Coordinator</p>
                 </div>
             </div>
 
-            <div class="team-member" data-name="Naomi Pointon" data-position="Recovery Coach / Support Coordinator" data-description="Hi there! My name is Naomi and I am a Recovery Coach/ Support Coordinator here at My
+            <div class="team-member" data-name="Adri" data-position="Recovery Coach / Support Coordinator" data-description="Hi there! My name is Naomi and I am a Recovery Coach/ Support Coordinator here at My
 Recovery 101. I am excited to help you create a life that works specifically for you, your
 personalised goals and individual circumstances.
 I am an internationally certified Results and Mindset Coach and passionate about supporting
@@ -190,10 +176,10 @@ I am extremely approachable and thrive on working collaboratively with people fr
 of life and can’t wait to hear about your special interests and the things that are important to
 you.">
                 <div class="image_mask">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/about/naomi.jpg" alt="Team Member 1">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/about/adri.jpg" alt="Team Member 1">
                 </div>
                 <div class="text-center mt-16">
-                    <h4 class="fs-lg fw-regular">Naomi Pointon</h4>
+                    <h4 class="fs-lg fw-regular">Adri</h4>
                     <p class="fw-bold fs-sm mt-8">Recovery Coach / Support Coordinator</p>
                 </div>
             </div>

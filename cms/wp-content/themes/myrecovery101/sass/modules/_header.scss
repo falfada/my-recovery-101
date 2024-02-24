@@ -2,6 +2,11 @@
  * Header.
  */
 header {
+  &.community {
+    position: fixed;
+    top: 0;
+  }
+
   a.logo {
     display: inline-block;
     text-indent: 100%;
@@ -236,7 +241,7 @@ header {
   position: relative;
   span {
     display: inline-block;
-  transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+    transition: transform 0.3s cubic-bezier(0.76, 0, 0.24, 1);
   }
   &::before,
   &::after {
@@ -262,7 +267,7 @@ header {
   }
   &:hover,
   &:focus {
-    span{
+    span {
       transform: translate3d(-200%, 0, 0);
     }
     &::after {

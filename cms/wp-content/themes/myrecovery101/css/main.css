@@ -493,7 +493,7 @@
   font-size: 2.8125rem; }
 
 .fs-serif-sm {
-  font-size: 1.75rem; }
+  font-size: 1.25rem; }
 
 @media (min-width: 768px) {
   .fs-4xl {
@@ -702,6 +702,8 @@ ul, ol {
   display: inline-flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap; }
+.d-block {
+  display: block; }
 
 /**
  * Text alignment.
@@ -715,6 +717,42 @@ ul, ol {
 .text-right {
   text-align: right; }
 
+@media (min-width: 768px) {
+  .text-md-center {
+    text-align: center; }
+
+  .text-md-left {
+    text-align: left; }
+
+  .text-md-right {
+    text-align: right; } }
+@media (min-width: 992px) {
+  .text-lg-center {
+    text-align: center; }
+
+  .text-lg-left {
+    text-align: left; }
+
+  .text-lg-right {
+    text-align: right; } }
+@media (min-width: 1200px) {
+  .text-xl-center {
+    text-align: center; }
+
+  .text-xl-left {
+    text-align: left; }
+
+  .text-xl-right {
+    text-align: right; } }
+@media (min-width: 1400px) {
+  .text-2xl-center {
+    text-align: center; }
+
+  .text-2xl-left {
+    text-align: left; }
+
+  .text-2xl-right {
+    text-align: right; } }
 /**
 * Layout.
 */
@@ -2660,6 +2698,9 @@ ul, ol {
 /**
  * Header.
  */
+header.community {
+  position: fixed;
+  top: 0; }
 header a.logo {
   display: inline-block;
   text-indent: 100%;
@@ -2967,7 +3008,8 @@ header a.logo {
           -ms-flex-pack: center;
               justify-content: center;
       top: 1.5rem;
-      right: 1.5rem; }
+      right: 1.5rem;
+      cursor: pointer; }
   .popup-image {
     width: 100%; }
   .popup-info {
@@ -3008,6 +3050,15 @@ footer {
     background-size: cover;
     width: 7.5rem;
     height: 4rem; }
+    footer a.logo-community {
+      width: 7.625rem;
+      height: 10rem;
+      background: url("../img/general/och-logo.png") no-repeat center center;
+      background-size: cover;
+      text-indent: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      display: inline-block; }
 
 @media (min-width: 576px) {
   footer {
@@ -3092,7 +3143,7 @@ footer {
     outline: none; }
 .input-date {
   width: 100%;
-  padding: 0.5rem 0;
+  padding: 0.94rem 0;
   outline: none;
   font-family: "Montserrat", sans-serif;
   border: none;
@@ -3189,7 +3240,7 @@ footer {
  * Home page.
  */
 .hero img {
-  margin-top: -3rem; }
+  margin-top: -1rem; }
 
 .about-home {
   background: url("../img/general/m-waves-bg.jpg") center no-repeat;
@@ -3248,7 +3299,7 @@ footer {
 
 @media (min-width: 768px) {
   .hero img {
-    margin-top: -7rem; }
+    margin-top: -3rem; }
 
   .about-home {
     background: url("../img/general/waves-bg.jpg") center no-repeat; }
@@ -3272,7 +3323,7 @@ footer {
     margin-top: -6.25rem; } }
 @media (min-width: 1200px) {
   .hero img {
-    margin-top: -17rem; }
+    margin-top: -4rem; }
   .hero div.button-container {
     margin-top: -21.875rem; }
 
@@ -3328,6 +3379,8 @@ footer {
       -ms-flex-align: center;
           align-items: center; }
 
+.team-slider .team-member {
+  cursor: pointer; }
 .team-slider .slick-next {
   right: 1.5rem; }
 .team-slider .slick-prev {
@@ -3447,3 +3500,69 @@ footer {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center; } }
+.community-bg {
+  width: 100%;
+  height: 100vh;
+  background: url("../img/community/community-hero-mobile.jpg") center top no-repeat;
+  background-size: cover;
+  padding-top: 7.5rem; }
+  .community-bg h1 span {
+    display: block; }
+.community-week {
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none; }
+  .community-week > div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 1.5rem;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start; }
+.community-day {
+  width: 304px;
+  text-wrap: wrap;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  padding: 1rem 1.5rem 1.5rem 1rem;
+  background: #ffffff;
+  border: 1px solid #85DBE0; }
+  .community-day.currentDay {
+    border: 1px solid #275A5C;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.16);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.16); }
+  .community-day img {
+    width: 32px; }
+.community-time {
+  background: #85DBE0;
+  border-radius: 1.125rem;
+  padding: 0.5rem 0.75rem;
+  display: inline-block; }
+.community-slider {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  gap: 24px; }
+.community-slide {
+  width: 393px;
+  height: 550px; }
+  .community-slide img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    -o-object-fit: cover;
+       object-fit: cover; }
+
+@media (min-width: 768px) {
+  .community-bg {
+    background: url("../img/community/community-hero-desktop.jpg") center top no-repeat;
+    background-size: cover;
+    padding-top: 5rem; } }

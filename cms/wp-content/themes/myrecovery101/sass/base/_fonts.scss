@@ -27,7 +27,7 @@ $font-sizes: (
 $font-sizes-serif: (
   "xl": 70,
   "md": 45,
-  "sm": 28,
+  "sm": 20,
 );
 
 @each $size, $value in $font-sizes-serif {
