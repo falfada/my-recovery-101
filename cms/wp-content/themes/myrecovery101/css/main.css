@@ -3551,19 +3551,10 @@ footer {
   border-radius: 1.125rem;
   padding: 0.5rem 0.75rem;
   display: inline-block; }
-.community-slider {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  gap: 24px; }
+.community-slider .slick-list {
+  padding: 0 10% 0 0 !important; }
 .community-slide {
-  width: 393px;
-  height: 550px; }
+  margin: 0 0.5rem; }
   .community-slide blockquote {
     max-height: 6.25rem;
     overflow-y: scroll; }
@@ -3578,4 +3569,7 @@ footer {
   .community-bg {
     background: url("../img/community/community-hero-desktop.jpg") center top no-repeat;
     background-size: cover;
-    padding-top: 5rem; } }
+    padding-top: 5rem; }
+
+  .community-slide {
+    margin: 0 0.25rem; } }

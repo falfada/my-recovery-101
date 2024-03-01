@@ -47,14 +47,10 @@
     display: inline-block;
   }
   &-slider{
-    width: fit-content;
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 24px;
+    .slick-list{padding:0 10% 0 0 !important;}
   }
   &-slide{
-    width: 393px;
-    height: 550px;
+    margin: 0 toRem(8);
     blockquote{
       max-height: toRem(100);
       overflow-y: scroll;
@@ -75,5 +71,8 @@
       no-repeat;
     background-size: cover;
     padding-top: toRem(80);
+  }
+  .community-slide{
+    margin: 0 toRem(4);
   }
 }

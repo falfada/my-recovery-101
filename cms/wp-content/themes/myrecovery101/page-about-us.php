@@ -83,40 +83,25 @@
         <h2 class="text-center fs-3xl">Our <span class="fs-serif-md ff-serif">Difference</span></h2>
         <div class="grid-col-1  grid-col-md-2 grid-col-xl-4 mt-32 gap-24">
             <div class="text-center">
-                <h3 class="ff-serif fs-serif-sm">Experience</h3>
-                <p class="fs-sm mt-8">With a wealth of experience in mental
-                    health, including both first hand and
-                    professional expertise, alongside many
-                    years in the NDIS sector, we bring a fresh
-                    and innovative approach to our work.</p>
+                <h3 class="ff-serif fs-serif-sm">Leading from the heart</h3>
+                <p class="fs-sm mt-8">At My Recovery 101 each member of our team has been personally selected for their genuine passion, commitment and dedication to supporting others so you really do feel like an individual rather than just a number!</p>
             </div>
 
             <div class="text-center">
-                <h3 class="ff-serif fs-serif-sm">Team</h3>
-                <p class="fs-sm mt-8">Each member of our team has been
-                    personally chosen for their genuine
-                    passion and dedication to supporting and
-                    assisting others.</p>
+                <h3 class="ff-serif fs-serif-sm">A wealth of experience</h3>
+                <p class="fs-sm mt-8">With a wealth of experience and training in mental health, including both lived and professional experience, alongside several years in the NDIS sector, you can rest assured you’re in safe hands on your journey to recovery.</p>
             </div>
 
             <div class="text-center">
-                <h3 class="ff-serif fs-serif-sm">Holistic Approach</h3>
-                <p class="fs-sm mt-8">We believe in a holistic and community
-                    approach with Group Activity Supports
-                    to enable participants to connect with
-                    each other and the My Recovery 101
-                    Team in a relaxed and safe environment.
-                    Examples included Art Therapy, Yoga,
-                    Cooking classes & more!</p>
+                <h3 class="ff-serif fs-serif-sm">Holistic Wellbeing</h3>
+                <p class="fs-sm mt-8">At My Recovery 101 we provide a multi-faceted approach to wellbeing embodying the mind, body and soul through both our individual supports and group programs. We also prioritize staff wellbeing to prevent worker burnout and 
+ensure long term staff retention.
+</p>
             </div>
 
             <div class="text-center">
-                <h3 class="ff-serif fs-serif-sm">Empower</h3>
-                <p class="fs-sm mt-8">At My Recovery 101, we believe in
-                    empowering you and working alongside
-                    you to ensure that your experience with
-                    us is truly unique and aligned with your
-                    personal goals.</p>
+                <h3 class="ff-serif fs-serif-sm">Personalized</h3>
+                <p class="fs-sm mt-8">Throughout all the work and different roles we do, we love to empower you to unlock your potential and live a meaningful and fulfilled life. We work alongside you to provide a personalized and unique experience aligned to your own goals and aspirations.</p>
             </div>
         </div>
     </div>
@@ -126,31 +111,25 @@
     <div class="container">
         <h2 class="text-center fs-3xl">Meet <span class="fs-serif-md ff-serif">The Team</span></h2>
         <div class="team-slider mt-40">
-            <div class="team-member" data-name="Naomi Pointon" data-position="Recovery Coach / Support Coordinator" data-description="Hi there! My name is Naomi and I am a Recovery Coach/ Support Coordinator here at My
-Recovery 101. I am excited to help you create a life that works specifically for you, your
-personalised goals and individual circumstances.
-I am an internationally certified Results and Mindset Coach and passionate about supporting
-participants on their mental wellbeing journey. I am also a trained Contemporary Jeweller
-and Visual Artist and enjoy utilising creativity and self-expression as a tool for wellbeing. I
-have worked for over 4 years in program coordination support and continual professional
-development (CPD) events in the health sector and have a special interest in increasing
-access to mental health support.
-I have two beautiful, wise and creative boys, aged 10 and 5. My eldest is on the Autism
-Spectrum and having some personal experience navigating NDIS previous to joining My
-Recovery 101, I am hopeful that I can bring some value to the team.
-I am extremely approachable and thrive on working collaboratively with people from all walks
-of life and can’t wait to hear about your special interests and the things that are important to
-you.">
+            <div class="team-member" data-name="Laura Holdaway " data-position="Founder and Director, My Recovery 101" data-description="Hi, I'm Laura, the founder and director of My Recovery 101. With a diverse background in psychology, life coaching, and holistic wellness, I am deeply passionate about guiding individuals along their paths to recovery and empowering them to unlock their unique potential. 
+Prior to establishing My Recovery 101, I spent several years in the sector in both support coordination and management roles within a larger mental health organisation. During this time, I witnessed the importance of personalised care and the profound impact it has on individuals. Motivated by a growing desire to offer tailored support that truly addresses people's needs, I founded My Recovery 101. At the core of our approach is the belief that every individual deserves to be treated with dignity and respect, not merely as a number in the system—an unfortunate reality all too common in this industry.
+At My Recovery 101, we love to get to know you as a person and strive to foster genuine connections and provide holistic support that honours the uniqueness of each person's journey. We are committed to walking alongside our clients, offering compassionate guidance, and creating a safe space for growth and healing to occur. 
+">
                 <div class="image_mask">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/about/naomi.jpg" alt="Team Member 1">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/about/laura.jpg" alt="Laura CEO My Recovery 101">
                 </div>
                 <div class="text-center mt-16">
-                    <h4 class="fs-lg fw-regular">Naomi Pointon</h4>
-                    <p class="fw-bold fs-sm mt-8">Recovery Coach / Support Coordinator</p>
+                    <h4 class="fs-lg fw-regular">Laura Holdaway </h4>
+                    <p class="fw-bold fs-sm mt-8">Founder and Director, My Recovery 101</p>
                 </div>
             </div>
 
-            <div class="team-member" data-name="Cecilia" data-position="Recovery Coach / Support Coordinator" data-description="Hi I'm Cecilia but everyone calls me CC :) I’m passionate about supporting and empowering others to live their best lives! I’m from a Project Management background originally so I am organised and get things done as quickly as possible. I have a particular passion for mental health support since I was little as my mother used to lead a Charity focusing on Schizophrenia and supporting individuals and families so I've grown up in a very supportive and inclusive environment. Since then I've trained in a variety of mental health disorders and I volunteered as the Mental Health First Aider at my previous organisation. I am originally from Sweden but moved to the UK when I was young, and then moved to Australia recently to begin my next adventure. I am a mum of two busy children (three if I count my husband in that…) and in my spare time I like to dabble in creative pursuits such as crafts or baking which helps me to relax. I like to think that I am friendly and approachable, so if there is anything you would like to know please get in touch.">
+            <div class="team-member" data-name="Cecilia" data-position="Recovery Coach / Support Coordinator" data-description="H I'm Cecilia, but just call me CC :) I'm deeply passionate about empowering others to embrace their fullest potential! With a background in Project Management, I thrive on organisation and efficiency, always striving to get things done promptly. My dedication to mental health support stems from my upbringing; my mother led a charity focused on Schizophrenia, fostering a nurturing and inclusive environment where I learned the importance of supporting individuals and families.
+
+Over time, I've immersed myself in training related to various mental health disorders and proudly served as a Mental Health First Aider at my previous workplace. I’m originally from  Sweden and then I made my way to the UK in my youth before embarking on my latest adventure in Australia. Balancing the joyful chaos of motherhood with two lively children (three if you count my husband!) I love creative pursuits like crafts and baking during my downtime. 
+
+In my role as a Support Coordinator and Recovery Coach at My Recovery 101, I'm excited about the opportunity to work with you on your journey to living your best life! I pride myself on thinking outside the box, tailoring personalised solutions to suit the unique needs of each participant. I’m approachable and warm-hearted and I'm always here to listen and chat, so feel free to reach out if there's anything you'd like to know!
+">
                 <div class="image_mask">
                     <img src="<?php echo get_template_directory_uri(); ?>/img/about/cecilia.jpg" alt="Team Member 1">
                 </div>
@@ -160,27 +139,24 @@ you.">
                 </div>
             </div>
 
-            <div class="team-member" data-name="Adri" data-position="Recovery Coach / Support Coordinator" data-description="Hi there! My name is Naomi and I am a Recovery Coach/ Support Coordinator here at My
-Recovery 101. I am excited to help you create a life that works specifically for you, your
-personalised goals and individual circumstances.
-I am an internationally certified Results and Mindset Coach and passionate about supporting
-participants on their mental wellbeing journey. I am also a trained Contemporary Jeweller
-and Visual Artist and enjoy utilising creativity and self-expression as a tool for wellbeing. I
-have worked for over 4 years in program coordination support and continual professional
-development (CPD) events in the health sector and have a special interest in increasing
-access to mental health support.
-I have two beautiful, wise and creative boys, aged 10 and 5. My eldest is on the Autism
-Spectrum and having some personal experience navigating NDIS previous to joining My
-Recovery 101, I am hopeful that I can bring some value to the team.
-I am extremely approachable and thrive on working collaboratively with people from all walks
-of life and can’t wait to hear about your special interests and the things that are important to
-you.">
+            <div class="team-member" data-name="Adri Hepden" data-position="Support Coordinator / Recovery Coach / Support Worker" data-description="Hello! My name is Adri and I am a Recovery Coach, Support coordinator and Support Worker here at My Recovery 101.
+I recently relocated from the UK, where I worked as a teacher. My
+determination and extra mile-ness while teaching made me realise
+that I love helping make a real and positive impact on people’s lives.
+Supporting participants with open and clear communication in a
+safe, comfortable setting helps me to get to the nitty-gritty of what
+you want your life to look like and how I can best help you actualise
+that. I am particularly passionate in supporting participants who have
+been experiencing challenges with their mental health. Having seen
+first-hand how mental illness can be received by the public, I am on
+a personal mission to make sure participants feel seen, heard and 
+respected in their community and in wider society.">
                 <div class="image_mask">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/about/adri.jpg" alt="Team Member 1">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/about/adri.jpg" alt="Adri Hepden">
                 </div>
                 <div class="text-center mt-16">
-                    <h4 class="fs-lg fw-regular">Adri</h4>
-                    <p class="fw-bold fs-sm mt-8">Recovery Coach / Support Coordinator</p>
+                    <h4 class="fs-lg fw-regular">Adri Hepden</h4>
+                    <p class="fw-bold fs-sm mt-8">Support Coordinator / Recovery Coach / Support Worker</p>
                 </div>
             </div>
 
@@ -200,7 +176,7 @@ I am extremely approachable and thrive on working collaboratively with people fr
 of life and can’t wait to hear about your special interests and the things that are important to
 you.">
                 <div class="image_mask">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/about/naomi.jpg" alt="Team Member 1">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/about/naomi.jpg" alt="Naomi Pointon">
                 </div>
                 <div class="text-center mt-16">
                     <h4 class="fs-lg fw-regular">Naomi Pointon</h4>
@@ -208,27 +184,55 @@ you.">
                 </div>
             </div>
 
-            <div class="team-member" data-name="Naomi Pointon" data-position="Recovery Coach / Support Coordinator" data-description="Hi there! My name is Naomi and I am a Recovery Coach/ Support Coordinator here at My
-Recovery 101. I am excited to help you create a life that works specifically for you, your
-personalised goals and individual circumstances.
-I am an internationally certified Results and Mindset Coach and passionate about supporting
-participants on their mental wellbeing journey. I am also a trained Contemporary Jeweller
-and Visual Artist and enjoy utilising creativity and self-expression as a tool for wellbeing. I
-have worked for over 4 years in program coordination support and continual professional
-development (CPD) events in the health sector and have a special interest in increasing
-access to mental health support.
-I have two beautiful, wise and creative boys, aged 10 and 5. My eldest is on the Autism
-Spectrum and having some personal experience navigating NDIS previous to joining My
-Recovery 101, I am hopeful that I can bring some value to the team.
-I am extremely approachable and thrive on working collaboratively with people from all walks
-of life and can’t wait to hear about your special interests and the things that are important to
-you.">
+            <div class="team-member" data-name="Belinda Davie" data-position="Support Worker" data-description="Hi I’m Belinda. As a heart-centred support worker, I'm known for my genuinely caring, compassionate energy. I'm passionate about ending the stigma around mental and emotional health and normalising these topics of conversation in our society. With my background in positive psychology and coaching, I have the ability to see the strengths in others that they often cannot see with their own eyes. I believe in taking a holistic approach to life, addressing the mind, body, and spirit. I'll match your pace and provide gentle encouragement towards your goals, aiming to help transform your quality of life for the better.
+">
                 <div class="image_mask">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/about/naomi.jpg" alt="Team Member 1">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/about/belinda.jpg" alt="Belinda Davie">
                 </div>
                 <div class="text-center mt-16">
-                    <h4 class="fs-lg fw-regular">Naomi Pointon</h4>
-                    <p class="fw-bold fs-sm mt-8">Recovery Coach / Support Coordinator</p>
+                    <h4 class="fs-lg fw-regular">Belinda Davie</h4>
+                    <p class="fw-bold fs-sm mt-8">Support Worker</p>
+                </div>
+            </div>
+
+            <div class="team-member" data-name="Nicky Beckett" data-position="Credentialed Mental Health Nurse" data-description="Hi I’m Nicky. I am a highly skilled Credentialed Mental Health Nurse with a wealth of experience spanning 25 years of dedicated practice in both the United Kingdom and Australia. My training in the UK laid a robust foundation for a diverse and rewarding career that has traversed a multitude of environments.
+
+With a passion for providing holistic care, I have navigated a variety of  settings, including in-patient units, community mental health teams, high secure forensic and non-government organisations. This breadth of experience has honed my ability to adapt nursing practices to meet the unique needs of individuals across different environments.
+ 
+Throughout my career, I have been a proponent of evidence-based practices, continually integrating the latest research and methodologies into my nursing approach. This dedication has not only enhanced my clinical skills but also positioned myself as a mentor and educator across the diverse landscapes of my employment.
+I always strive to demonstrate a compassionate and empathetic approach to individual care delivery whilst highly valuing the importance of building rapport and a trusting therapeutic relationship. I also recognise the profound impact these relationships have on the person’s recovery journey, their family and communities.
+
+Currently, I continue to actively contribute to the field of mental health nursing, engaging across various settings, including in-patient units and within the NDIS space. My focus remains on advocating for and championing recovery-focused mental health services.
+
+">
+                <div class="image_mask">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/about/nicky.jpg" alt="Nicky Beckett">
+                </div>
+                <div class="text-center mt-16">
+                    <h4 class="fs-lg fw-regular">Nicky Beckett</h4>
+                    <p class="fw-bold fs-sm mt-8">Credentialed Mental Health Nurse</p>
+                </div>
+            </div>
+
+            <div class="team-member" data-name="Dominic Churchyard" data-position="Support Coordinator" data-description="Hi I'm Dom, 
+A little bit about me and how I ended up here in Sydney... Having got a one way flight to New Delhi in 2010 I travelled far and wide for 2.5 years before realising Sydney is where I can see myself creating a life in. 
+So, along with my degree in criminology, A levels in Sociology and Psychology, I moved from the UK to Australia in 2017 to study a masters in social work. Since completing this, I have been working in mental health for approximately 5 years.
+Having previously worked in finance I realised my real passion was outside of an office, working with people and supporting those to improve their lives and realise their potential regardless of any difficulties they may live with.
+I believe everybody has a purpose and potential to contribute so much in society and eradicate the previous stigma that was associated with mental health.
+
+Having been a Support coordinator for over 3 years, I have created a wide network of services and supports which can help those NDIS participants reach for the stars. 
+
+I would say I'm pretty calm, laid back, positive and fun loving which I bring both into work and outside of work. 
+
+In my spare time I like to play football, scuba dive and snowboard when I can, as well as go on adventures, socialise with friends and drink far too much coffee than recommended!
+
+">
+                <div class="image_mask">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/about/dom.jpg" alt="Dominic Churchyard">
+                </div>
+                <div class="text-center mt-16">
+                    <h4 class="fs-lg fw-regular">Dominic Churchyard</h4>
+                    <p class="fw-bold fs-sm mt-8">Support Coordinator</p>
                 </div>
             </div>
         </div>

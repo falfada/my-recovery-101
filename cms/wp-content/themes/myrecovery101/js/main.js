@@ -108,24 +108,34 @@ $(document).ready(function () {
   /**
    * Community Slider.
    */
-  const communitySlider = document.querySelector(".community-slider");
-  let communitySliderWidth = communitySlider.offsetWidth;
-  let amountToScroll = communitySliderWidth - window.innerWidth;
-
-  const tween = gsap.to(communitySlider, {
-    x: -amountToScroll,
-    duration: 3,
-    ease: "none",
+  $('.community-slider').slick({
+    infinite: true,
+    slidesToShow: 4,
+    slidesToScroll: 3,
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      // {
+      //   breakpoint: 1200,
+      //   settings: {
+      //     slidesToShow: 3,
+      //   },
+      // },
+    ],
   });
 
-  ScrollTrigger.create({
-    trigger: ".community-slider-wrapper",
-    start: "top 20%",
-    end: "+=" + amountToScroll,
-    pin: true,
-    animation: tween,
-    scrub: 1,
-  });
+  
   /**
    * Community Weekly Calendar.
    */

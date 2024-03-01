@@ -8,13 +8,13 @@
 
 
         <div class="d-flex gap-24 mt-24">
-            <a href="#" class="fs-md button uppercase d-inline-flex align-center">
+            <a href="https://www.instagram.com/myrecoverycoach101/" target="_blank" class="fs-md button uppercase d-inline-flex align-center">
                 Instagram
                 <span class="material-symbols-outlined">
                     arrow_outward
                 </span>
             </a>
-            <a href="#" class="fs-md button uppercase d-inline-flex align-center">
+            <a href="https://www.facebook.com/profile.php?id=61553984503987" target="_blank" class="fs-md button uppercase d-inline-flex align-center">
                 Facebook
                 <span class="material-symbols-outlined">
                     arrow_outward
@@ -27,12 +27,12 @@
 
 
         <div class="mt-16 mt-md-32">
-            <a href="#" class=" fs-lg d-flex gap-8 align-center text-black">
+            <a href="tel:0407550728" class=" fs-lg d-flex gap-8 align-center text-black">
                 <span class="material-symbols-outlined icon-button">
                     call
                 </span> 0407-550-728
             </a>
-            <a href="#" class=" fs-lg d-flex gap-8 align-center text-black mt-16 mt-md-32">
+            <a href="mailto:admin@myrecovery101.com.au" class=" fs-lg d-flex gap-8 align-center text-black mt-16 mt-md-32">
                 <span class="material-symbols-outlined icon-button">
                     mail
                 </span> admin@myrecovery101.com.au
