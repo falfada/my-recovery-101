@@ -77,7 +77,7 @@
             <div>
                 <div id="Monday" class="community-day">
                     <p class="ff-serif fs-serif-sm text-teal">MONDAY</p>
-                    <div class="mt-120">
+                    <div class="mt-40">
                         <img src="<?php echo get_template_directory_uri(); ?>/img/community/mindfulness.svg" alt="">
                         <p class="fw-bold fs-2xl">Mindfulness</p>
                         <div class="community-time fw-bold">
@@ -88,38 +88,39 @@
 
                 <div id="Tuesday" class="community-day">
                     <p class="ff-serif fs-serif-sm text-teal">TUESDAY</p>
-                    <div class="mt-120">
+                    <div class="mt-40">
                         <img src="<?php echo get_template_directory_uri(); ?>/img/community/cooking.svg" alt="">
                         <p class="fw-bold fs-2xl">Cooking Class</p>
                         <div class="community-time fw-bold">
-                            10AM - 12PM
+                            12PM - 2PM
                         </div>
                     </div>
                 </div>
 
                 <div id="Wednesday" class="community-day">
                     <p class="ff-serif fs-serif-sm text-teal">WEDNESDAY</p>
-                    <div class="mt-120">
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/community/art.svg" alt="">
-                        <p class="fw-bold fs-2xl">Cooking Class</p>
+                    <div class="mt-40">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/community/movement.svg" alt="">
+                        <p class="fw-bold fs-2xl">Dance (Movement)</p>
                         <div class="community-time fw-bold">
-                            10AM - 12PM
+                            10AM - 2PM
                         </div>
                     </div>
-                    <div class="mt-32">
+                    <!-- Second class  -->
+                    <!-- <div class="mt-40">
                         <img src="<?php echo get_template_directory_uri(); ?>/img/community/music.svg" alt="">
                         <p class="fw-bold fs-2xl">Music Class</p>
                         <div class="community-time fw-bold">
                             2PM - 4PM
                         </div>
-                    </div>
+                    </div> -->
                 </div>
 
                 <div id="Thursday" class="community-day">
                     <p class="ff-serif fs-serif-sm text-teal">THURSDAY</p>
-                    <div class="mt-120">
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/community/movement.svg" alt="">
-                        <p class="fw-bold fs-2xl">Movement (Dance)</p>
+                    <div class="mt-40">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/community/art.svg" alt="">
+                        <p class="fw-bold fs-2xl">Art Therapy</p>
                         <div class="community-time fw-bold">
                             10AM - 12PM
                         </div>
@@ -128,11 +129,11 @@
 
                 <div id="Friday" class="community-day">
                     <p class="ff-serif fs-serif-sm text-teal">FRIDAY</p>
-                    <div class="mt-120">
+                    <div class="mt-40">
                         <img src="<?php echo get_template_directory_uri(); ?>/img/community/free.svg" alt="">
                         <p class="fw-bold fs-2xl">Freedom Friday (Movies)</p>
                         <div class="community-time fw-bold">
-                            10AM - 12PM
+                            10AM - 3PM
                         </div>
                     </div>
                 </div>

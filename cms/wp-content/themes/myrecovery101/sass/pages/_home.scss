@@ -71,6 +71,12 @@
         right: toRem(48);
         left: initial;
     }
+    .slick-slide{
+        blockquote{
+            max-height: toRem(100);
+            overflow-y: scroll;
+        }
+    }
 }
 @media (min-width: $screen_md) {
     .hero{

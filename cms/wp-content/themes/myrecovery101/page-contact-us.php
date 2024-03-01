@@ -8,8 +8,8 @@
 </section>
 <section class="referral-bg mt-40">
     <div class="container">
-        <h2 class="ff-serif fs-serif-md">Spread the love!</h2>
-        <h3 class="fs-2xl mt-8 col-lg-10 col-xl-8 col-2xl-7">Refer a friend or person you support and let's grow together</h3>
+        <h2 class="ff-serif fs-serif-md">Ready to get started?</h2>
+        <h3 class="fs-2xl mt-8 col-lg-8 col-2xl-12">Fill in our referral form and let the journey begin!</h3>
         <a href="<?= home_url('/referral-form/') ?>" class="button circle uppercase fw-semibold mt-24"><span>REFERRAL FORM</span></a>
     </div>
 </section>

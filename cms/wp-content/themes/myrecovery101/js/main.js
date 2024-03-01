@@ -1,5 +1,17 @@
 $(document).ready(function () {
   /**
+   * Animation.
+   */
+  let animationTl = gsap.timeline({
+    defaults: { ease: "power4.inOut", duration: 2 },
+  });
+  animationTl.to(".anim-up-h1", {
+    "clip-path": "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
+    opacity: 1,
+    y: 0,
+    duration: 2.2,
+  });
+  /**
    * Services Desktop.
    */
   function updateServiceDetails(title, description, link) {
@@ -54,12 +66,44 @@ $(document).ready(function () {
     updateServiceDetails(title, description, link);
   }
 
+  function handleHashChange() {
+    const hash = window.location.hash;
+    if (hash) {
+      const serviceId = hash.substring(1);
+      const service = document.getElementById(serviceId);
+      if (service) {
+        const title = service
+          .querySelector(".service-image")
+          .getAttribute("data-title");
+        const description = service
+          .querySelector(".service-image")
+          .getAttribute("data-description");
+        const link = service
+          .querySelector(".service-image")
+          .getAttribute("data-link");
+
+        updateServiceDetails(title, description, link);
+
+        document
+          .querySelectorAll(".services-page-slider > div")
+          .forEach((column) => {
+            column.classList.remove("active");
+          });
+        service.classList.add("active");
+      }
+    }
+  }
+
+  window.addEventListener("hashchange", handleHashChange);
+
   const serviceColumns = document.querySelectorAll(
     ".services-page-slider > div"
   );
   serviceColumns.forEach(function (column) {
     column.addEventListener("mouseenter", handleServiceColumnHover);
   });
+
+  handleHashChange();
 
   /**
    * Community Slider.
@@ -71,16 +115,16 @@ $(document).ready(function () {
   const tween = gsap.to(communitySlider, {
     x: -amountToScroll,
     duration: 3,
-    ease: "none"
+    ease: "none",
   });
 
   ScrollTrigger.create({
     trigger: ".community-slider-wrapper",
-    start:"top 20%",
-    end:"+=" + amountToScroll,
-    pin:true,
-    animation:tween,
-    scrub:1
+    start: "top 20%",
+    end: "+=" + amountToScroll,
+    pin: true,
+    animation: tween,
+    scrub: 1,
   });
   /**
    * Community Weekly Calendar.
@@ -116,7 +160,6 @@ $(document).ready(function () {
     });
   });
 
-  
   /**
    * Form Input.
    */

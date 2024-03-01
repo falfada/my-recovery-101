@@ -55,6 +55,10 @@
   &-slide{
     width: 393px;
     height: 550px;
+    blockquote{
+      max-height: toRem(100);
+      overflow-y: scroll;
+    }
     img{
         width: 100%;
         height: 100%;
