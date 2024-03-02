@@ -55,7 +55,7 @@
                             <li><a href="<?= home_url('/about-us/') ?>">About Us</a></li>
                             <li><a href="<?= home_url('/services/') ?>">Services</a></li>
                             <li><a href="<?= home_url('/resources/') ?>">Resources</a></li>
-                            <li><a href="<?= home_url('/community-hub/') ?>">Our Community</a></li>
+                            <li><a href="<?= home_url('/community/') ?>">Our Community</a></li>
                             <li><a href="<?= home_url('/contact-us/') ?>">Contact Us</a></li>
                         </ul>
                     </div>
