@@ -7,7 +7,7 @@
 
 </section>
 <section class="mt-40">
-<div class="categories-container">
+<!-- <div class="categories-container">
     <div class="container">
             <div class="category active fw-semibold">All</div>
             <div class="category fw-semibold">Recipes</div>
@@ -15,7 +15,7 @@
             <div class="category fw-semibold">Self-care strategies</div>
             <div class="category fw-semibold">Navigating the NDIS</div>
         </div>
-</div>
+</div> -->
 <div class="container">
 <div class="grid-col-1 grid-col-md-2  grid-col-2xl-3 col-2xl-10 m-2xl-auto gap-40 mt-40">
     <a href="https://myrecovery101.com.au/cms/wp-content/themes/myrecovery101/docs/101SelfRelaxationIdeas.pdf" target="_blank" class="text-black">

@@ -1,4 +1,18 @@
 $(document).ready(function () {
+
+  /**
+   * Form Input.
+   */
+
+  $("#fileInput").change(function () {
+    let parentContainer = $(this).parent();
+    let labelForFile = parentContainer.siblings("label");
+    let textToDisplay = $("#fileInput")[0].files[0].name;
+    console.log(textToDisplay);
+    let newParagraph = `<p class="fileName">${textToDisplay}</p>`;
+    labelForFile.after(newParagraph);
+  });
+  
   /**
    * Animation.
    */
@@ -11,6 +25,7 @@ $(document).ready(function () {
     y: 0,
     duration: 2.2,
   });
+
   /**
    * Services Desktop.
    */
@@ -168,17 +183,6 @@ $(document).ready(function () {
 
       category.classList.add("active");
     });
-  });
-
-  /**
-   * Form Input.
-   */
-  $("#fileInput").change(function () {
-    let parentContainer = $(this).parent();
-    let labelForFile = parentContainer.siblings("label");
-    let textToDisplay = $("#fileInput")[0].files[0].name;
-    let newParagraph = `<p class="fileName">${textToDisplay}</p>`;
-    labelForFile.after(newParagraph);
   });
 
   /**
