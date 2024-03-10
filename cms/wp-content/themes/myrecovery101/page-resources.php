@@ -112,6 +112,14 @@
         <p class="font-sm mt-8">Where to get help</p>
     </a>
 
+    <a href="https://myrecovery101.com.au/cms/wp-content/themes/myrecovery101/docs/calendar2024.pdf" target="_blank" class="text-black">
+        <img src="https://images.unsplash.com/photo-1560420025-9453f02b4751?q=80&w=1601&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" class="category-img">
+        <div class="category-type mt-16 lavender">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/resources/category-things.svg" alt="">
+            <p class="fw-semibold">Things to do</p>
+        </div>
+        <p class="font-sm mt-8">Calendar 2024</p>
+    </a>
     
 </div> 
 </div>  
