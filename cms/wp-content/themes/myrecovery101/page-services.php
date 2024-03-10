@@ -59,7 +59,7 @@
                 <p class="fs-sm line-3">
                 At My Recovery 101, creating a sense of community and inclusion is at the heart of everything we do. If you are looking to build new skills and make friends, look no further! At Our Community Hub, we provide a vibrant, safe and welcoming haven where individuals can come together to connect and grow. Through a dynamic array of activities such as cooking classes, art therapy, music sessions, mindfulness practices, dance workshops, gardening, movie days and more, we offer a diverse opportunity for social connection and skill development. Our fun-filled outings further enrich the experience, creating lasting memories and friendships for life.  
                 </p>
-                <a href="<?= home_url('/community-hub/') ?>" class="button circle uppercase fw-semibold mt-24"><span>LEARN MORE</span></a>
+                <a href="<?= home_url('/community/') ?>" class="button circle uppercase fw-semibold mt-24"><span>LEARN MORE</span></a>
             </div>
         </div>
        
