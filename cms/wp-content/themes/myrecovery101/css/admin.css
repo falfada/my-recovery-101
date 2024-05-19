@@ -1,0 +1,4 @@
+.acf-field-wysiwyg.acf-field-title .acf-editor-wrap iframe {
+    height: 100px !important;
+    min-height: 100px !important;
+  }

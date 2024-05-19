@@ -35,14 +35,15 @@
 
 <body <?php body_class() ?>>
     <header class="container">
-        <h1><a href="<?= home_url() ?>" class="logo">My Recovery 101</a></h1>
-        <ul class="d-lg-flex text-center d-desktop gap-24 gap-xl-40">
-            <li><a href="<?= home_url('/about-us/') ?>" data-replace="About Us" class="nav-link uppercase text-md text-black fw-semibold"><span>About Us</span></a></li>
-            <li><a href="<?= home_url('/services/') ?>" data-replace="Services" class="nav-link uppercase text-md text-black fw-semibold"><span>Services</span></a></li>
-            <li><a href="<?= home_url('/resources/') ?>" data-replace="Resources" class="nav-link uppercase text-md text-black fw-semibold"><span>Resources</span></a></li>
-            <li><a href="<?= home_url('/community/') ?>" data-replace="Our Community" class="nav-link uppercase text-md text-black fw-semibold"><span>Our Community</span></a></li>
-            <li><a href="<?= home_url('/contact-us/') ?>" class="button uppercase fw-semibold">Contact Us</a></li>
-        </ul>
+        <h1><a href="<?= home_url() ?>" class="logo"><?= get_bloginfo('name') ?></a></h1>
+        <?php
+        wp_nav_menu([
+            'theme_location'    => 'main-menu',
+            'menu_class'        => 'd-lg-flex text-center d-desktop gap-24 gap-xl-40',
+            'container'         => 'ul',
+            'walker' => new Main_Menu_Walker()
+        ]);
+        ?>
         <div class="outer-menu">
             <input class="checkbox-toggle" type="checkbox" />
             <div class="hamburger">
@@ -51,24 +52,15 @@
             <div class="menu">
                 <div>
                     <div>
-                        <ul>
-                            <li><a href="<?= home_url('/about-us/') ?>">About Us</a></li>
-                            <li><a href="<?= home_url('/services/') ?>">Services</a></li>
-                            <li><a href="<?= home_url('/resources/') ?>">Resources</a></li>
-                            <li><a href="<?= home_url('/community/') ?>">Our Community</a></li>
-                            <li><a href="<?= home_url('/contact-us/') ?>">Contact Us</a></li>
-                        </ul>
+                        <?php
+                        wp_nav_menu([
+                            'theme_location'    => 'main-menu',
+                            'menu_class'        => '',
+                            'container'         => 'ul',
+                        ]);
+                        ?>
                     </div>
                 </div>
             </div>
         </div>
-
-        <!-- <?php
-                wp_nav_menu([
-                    'theme_location' => 'main-menu',
-                    'menu_class'     => 'main-menu',
-                    'container'      => 'nav',
-                    'container_class' => 'menu-container',
-                ]);
-                ?> -->
     </header>
