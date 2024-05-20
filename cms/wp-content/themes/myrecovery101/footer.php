@@ -1,47 +1,46 @@
 <?php wp_footer(); 
 
-$footer = get_field('footer', 'option');
-
+$social_repeater = 'social_repeater';
+$get_in_touch_text = get_field('get_in_touch_text', 'option');
+$phone = get_field('phone', 'option');
+$email = get_field('email', 'option');
 ?>
 <footer>
     <div class="container">
         <a href="<?= home_url() ?>" class="logo"><?= get_bloginfo('name') ?></a>
-        <div class="d-flex gap-24 mt-24">
-            <?php if ($footer['instagram']) :
-                $link_url = $footer['instagram']['url'];
-                $link_title = $footer['instagram']['title'];
-                $link_target = $footer['instagram']['target'] ? $footer['instagram']['target'] : '_self';
-            ?>
-                <a href="<?= esc_url($link_url); ?>" class="fs-md button uppercase d-inline-flex align-center" target="<?= esc_attr($link_target); ?>">
-                    <?= esc_html($link_title); ?>
-                    <span class="material-symbols-outlined">arrow_outward</span>
-                </a>
-            <?php endif ?>
-            <?php if ($footer['facebook']) :
-                $link_url = $footer['facebook']['url'];
-                $link_title = $footer['facebook']['title'];
-                $link_target = $footer['facebook']['target'] ? $footer['facebook']['target'] : '_self';
-            ?>
-                <a href="<?= esc_url($link_url); ?>" class="fs-md button uppercase d-inline-flex align-center" target="<?= esc_attr($link_target); ?>">
-                    <?= esc_html($link_title); ?>
-                    <span class="material-symbols-outlined">arrow_outward</span>
-                </a>
-            <?php endif ?>
-        </div>
-        <p class="fs-3xl uppercase fw-semibold mt-24 mt-md-48"><?= $footer['get_in_touch_text'] ?></p>
+        <?php if (have_rows($social_repeater, 'option')) : ?>
+            <div class="d-flex gap-24 mt-24">
+                <?php while (have_rows($social_repeater, 'option')) : the_row();
+                    $social = get_sub_field('social');
+                    ?>
+                    <?php if ($social) :
+                        $link_url = $social['url'];
+                        $link_title = $social['title'];
+                        $link_target = $social['target'] ? $social['target'] : '_self';
+                    ?>
+                        <a href="<?= esc_url($link_url); ?>" class="fs-md button uppercase d-inline-flex align-center" target="<?= esc_attr($link_target); ?>">
+                            <?= esc_html($link_title); ?>
+                            <span class="material-symbols-outlined">arrow_outward</span>
+                        </a>
+                    <?php endif ?>
+                <?php endwhile ?>
+            </div>
+        <?php endif ?>
+
+        <p class="fs-3xl uppercase fw-semibold mt-24 mt-md-48"><?= $get_in_touch_text ?></p>
         <div class="mt-16 mt-md-32">
-            <?php if ($footer['phone']) :
-                $link_url = $footer['phone']['url'];
-                $link_title = $footer['phone']['title'];
+            <?php if ($phone) :
+                $link_url = $phone['url'];
+                $link_title = $phone['title'];
             ?>
                 <a href="<?= esc_url($link_url); ?>" class=" fs-lg d-flex gap-8 align-center text-black">
                     <span class="material-symbols-outlined icon-button">call</span>
                     <?= esc_html($link_title); ?>
                 </a>
             <?php endif ?>
-            <?php if ($footer['email']) :
-                $link_url = $footer['email']['url'];
-                $link_title = $footer['email']['title'];
+            <?php if ($email) :
+                $link_url = $email['url'];
+                $link_title = $email['title'];
             ?>
                 <a href="<?= esc_url($link_url); ?>" class=" fs-lg d-flex gap-8 align-center text-black mt-16 mt-md-32">
                     <span class="material-symbols-outlined icon-button">mail</span>

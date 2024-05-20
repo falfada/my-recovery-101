@@ -5,11 +5,12 @@ require_once get_template_directory() . '/inc/class-main-menu-walker.php';
 add_action('after_setup_theme', 'theme_setup');
 add_action('admin_enqueue_scripts', 'admin_style');
 add_filter('use_block_editor_for_post', '__return_false');
+add_filter('upload_mimes', 'cc_mime_types');
 
 add_action('admin_init', 'disable_comments_post_types_support');
 add_action('admin_init', 'disable_comments_dashboard');
 add_action('admin_init', 'disable_comments_admin_menu_redirect');
-add_action('admin_menu', 'disable_comments_admin_menu');
+add_action('admin_menu', 'disable_menus');
 add_action('wp_before_admin_bar_render', 'admin_bar_render');
 add_action('init', 'disable_comments_admin_bar');
 add_filter('comments_open', '__return_false', 20, 2);
@@ -50,10 +51,11 @@ function disable_comments_post_types_support()
 }
 
 /** 
- * Remove comments page in menu. 
+ * Remove menu items. 
  */
-function disable_comments_admin_menu()
+function disable_menus()
 {
+    remove_menu_page('edit.php');
     remove_menu_page('edit-comments.php');
 }
 
@@ -95,3 +97,11 @@ function admin_bar_render()
     global $wp_admin_bar;
     $wp_admin_bar->remove_menu('comments');
 }
+
+/**
+ * Allow SVG File through Media Uploader.
+ */
+function cc_mime_types($mimes) {
+    $mimes['svg'] = 'image/svg+xml';
+    return $mimes;
+  }

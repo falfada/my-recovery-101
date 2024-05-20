@@ -22,7 +22,7 @@ if (is_front_page()) :
     $title_feedback = get_field('title_feedback');
     $feedback_repeater = 'feedback_repeater';
 
-    /** Feedback fields */
+    /** Contact fields */
     $title_contact = get_field('title_contact');
     $link_contact = get_field('link_contact');
 ?>
