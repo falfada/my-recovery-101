@@ -29,19 +29,21 @@ $link_contact = get_field('link_contact', 2);
                 $image = get_sub_field('image');
                 $content = get_sub_field('content');
                 $link = get_sub_field('link');
+
+                if ($link) :
+                    $link_url = $link['url'];
+                    $link_title = $link['title'];
+                    $link_target = $link['target'] ? $link['target'] : '_self';
+                endif;
             ?>
                 <div id="service<?= get_row_index() ?>">
                     <?php if ($image) : ?>
-                        <img src="<?= esc_url($image['url']) ?>" alt="<?= esc_attr($image['alt']) ?>" class="service-image" data-title="<?= esc_html($title) ?>" data-description="<?= $content ?>" data-link="<?= $link ?>">
+                        <img src="<?= esc_url($image['url']) ?>" alt="<?= esc_attr($image['alt']) ?>" class="service-image" data-title="<?= esc_html($title) ?>" data-description="<?= $content ?>" data-link="<?= $link_url ?>">
                     <?php endif; ?>
                     <div class="service-info hide-2xl text-center mt-16">
                         <h2 class="fs-3xl"><?= $title ?></h2>
                         <p class="fs-sm line-3"><?= $content ?></p>
-                        <?php if ($link) :
-                            $link_url = $link['url'];
-                            $link_title = $link['title'];
-                            $link_target = $link['target'] ? $link['target'] : '_self';
-                        ?>
+                        <?php if ($link) : ?>
                             <a href="<?= esc_url($link_url); ?>" class="button circle uppercase fw-semibold mt-24" target="<?= esc_attr($link_target); ?>"><span><?= esc_html($link_title); ?></span></a>
                         <?php endif ?>
                     </div>

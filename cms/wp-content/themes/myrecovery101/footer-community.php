@@ -47,7 +47,7 @@ $email = get_field('email_community', 'option');
                 </a>
             <?php endif ?>
         </div>
-        <p class="mt-40 mt-md-96 fs-md">&copy; <span id="year"></span> <?= $get_in_touch_text ?>.</p>
+        <p class="mt-40 mt-md-96 fs-md">&copy; <span id="year"></span> <?= get_bloginfo('name') ?>.</p>
     </div>
 </footer>
 <!-- jQuery -->
