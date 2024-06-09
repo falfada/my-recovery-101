@@ -60,12 +60,19 @@ get_header();
                             <?php while (have_rows($repeater)) : the_row();
                                 $activity = get_sub_field('activity');
                                 $icon = get_sub_field('icon');
-                                $time = get_sub_field('time');
+                                $schedule_repeater = 'schedule_repeater';
                             ?>
                                 <div class="mt-40">
                                     <img src="<?= esc_url($icon['url']) ?>" alt="<?= esc_attr($icon['alt']) ?>" />
                                     <p class="fw-bold fs-2xl"><?= esc_html($activity) ?></p>
-                                    <div class="community-time fw-bold"><?= esc_html($time) ?></div>
+                                    <?php if (have_rows($schedule_repeater)) :
+                                        while (have_rows($schedule_repeater)) : the_row();
+                                            $time = get_sub_field('time');
+                                    ?>
+                                            <div class="community-time fw-bold"><?= esc_html($time) ?></div>
+                                    <?php endwhile;
+                                    endif;
+                                    ?>
                                 </div>
                             <?php endwhile; ?>
                         </div>

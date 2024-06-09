@@ -9,28 +9,12 @@ get_header();
 /**  Resources fields */
 $title_resources_page = get_field('title_resources_page');
 $image_resources_page = get_field('image_resources_page');
-$resources_repeater_page = 'resources_repeater_page';
-
-$categories_resources = [
-    'Recipes' => [
-        'icon' => 'category-recipes.svg',
-        'color' => 'peach'
-    ],
-    'Things to do' => [
-        'icon' => 'category-things.svg',
-        'color' => 'lavender'
-    ],
-    'Self-care strategies' => [
-        'icon' => 'category-selfcare.svg',
-        'color' => 'cyan'
-    ],
-    'Navigating the NDIS' => [
-        'icon' => 'category-ndis.svg',
-        'color' => 'purple'
-    ],
-];
 ?>
-
+<style>
+    .resource-item.inactive {
+        display: none;
+    }
+</style>
 <section>
     <div class="container">
         <h1 class="text-center fs-4xl"><?= $title_resources_page ?></h1>
@@ -40,39 +24,29 @@ $categories_resources = [
     <?php endif ?>
 </section>
 <section class="mt-40">
-    <!-- <div class="categories-container">
+    <div class="categories-container">
         <div class="container">
-                <div class="category active fw-semibold">All</div>
-                <div class="category fw-semibold">Recipes</div>
-                <div class="category fw-semibold">Things to do</div>
-                <div class="category fw-semibold">Self-care strategies</div>
-                <div class="category fw-semibold">Navigating the NDIS</div>
-            </div>
-    </div> -->
+            <div class="category active" data-category="all">All</div>
+            <?php
+            $categories = get_terms([
+                'taxonomy' => 'resource_category',
+                'hide_empty' => true,
+            ]);
+
+            foreach ($categories as $category) { ?>
+                <div class="category" data-category="<?= esc_attr($category->slug) ?>"><?= esc_html($category->name) ?></div>
+            <?php } ?>
+        </div>
+    </div>
     <div class="container">
-        <?php if (have_rows($resources_repeater_page)) : ?>
-            <div class="grid-col-1 grid-col-md-2  grid-col-2xl-3 col-2xl-10 m-2xl-auto gap-40 mt-40">
-                <?php while (have_rows($resources_repeater_page)) : the_row();
-                    $name = get_sub_field('name');
-                    $category = get_sub_field('category');
-                    $image = get_sub_field('image');
-                    $file = get_sub_field('file');
-                ?>
-
-                    <a href="<?= $file['url']; ?>" target="_blank" class="text-black">
-                        <?php if ($image) : ?>
-                            <img src="<?= esc_url($image['url']) ?>" alt="<?= esc_attr($image['alt']) ?>" class="category-img" />
-                        <?php endif ?>
-                        <div class="category-type mt-16 <?= $categories_resources[$category[0]]['color'] ?>">
-                            <img src="<?= get_template_directory_uri(); ?>/img/resources/<?= $categories_resources[$category[0]]['icon'] ?>" alt="">
-                            <p class="fw-semibold"><?= $category[0] ?></p>
-                        </div>
-                        <p class="font-sm mt-8"><?= $name ?></p>
-                    </a>
-
-                <?php endwhile ?>
-            </div>
-        <?php endif ?>
+        <div id="resource-container" class="grid-col-1 grid-col-md-2 grid-col-2xl-3 col-2xl-10 m-2xl-auto gap-40 mt-40">
+        </div>
+    </div>
+    <div id="loading" style="text-align: center;display: none;width: 50px; margin: 2em auto;">
+        <img src="<?= get_template_directory_uri(); ?>/img/loader.gif" alt="">
+    </div>
+    <div id="load-more-container" style="text-align: center; margin-top: 2em;">
+        <a href="#" id="load-more-button" class="button">Load More</a>
     </div>
 </section>
 
