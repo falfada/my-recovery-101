@@ -298,10 +298,11 @@ function load_more_resources_callback()
 
                     <?php foreach ($categories_terms as $term) { ?>
                         <?php
-                        $category_color = get_field('color_resource_category', $term);
+                        $bg_category_color = get_field('color_resource_category', $term);
+                        $text_category_color = get_field('text_color_resource_category', $term);
                         $category_icon = get_field('icon_resource_category', $term);
                         ?>
-                        <div class="category-type mt-16" style="background-color: <?= esc_attr($category_color); ?>;">
+                        <div class="category-type mt-16" style="background-color: <?= esc_attr($bg_category_color); ?>; color: <?= esc_attr($text_category_color); ?>;">
                             <img src="<?= esc_url($category_icon['url']); ?>" alt="">
                             <p class="fw-semibold"><?= esc_html($term->name); ?></p>
                         </div>
