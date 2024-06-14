@@ -21,7 +21,6 @@
     > div {
       display: flex;
       gap: toRem(24);
-      align-items: flex-start;
     }
   }
   &-day{
@@ -47,10 +46,25 @@
     display: inline-block;
   }
   &-slider{
-    .slick-list{padding:0 10% 0 0 !important;}
+    width: 95%;
+    margin: auto;
+    .slick-prev, .slick-next{
+      width: toRem(24);
+      height: toRem(24);
+      z-index: 100;
+      &::before{
+        font-size: toRem(24);
+      }
+    }
+    .slick-prev{
+      left: toRem(-32);
+    }
+    .slick-next{
+      right: toRem(-32);
+    }
   }
   &-slide{
-    margin: 0 toRem(8);
+    // margin: 0 toRem(8);
     blockquote{
       max-height: toRem(100);
       overflow-y: scroll;
