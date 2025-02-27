@@ -23,13 +23,15 @@ readme.txt
 /.docs/documentation/*
 # Ignore everything in the root except the "wp-content" directory
 !cms/wp-content/
+# Ignore WordPress core files
+cms/wp-admin/
+cms/wp-includes/
 # Ignore everything in the "wp-content" directory with some exceptions
 cms/wp-content/*
 !cms/wp-content/languages/
 !cms/wp-content/mu-plugins/
 !cms/wp-content/plugins/
 !cms/wp-content/themes/
-!cms/wp-content/uploads/
 !cms/wp-content/php-error.php
 # WordPress plugins
 cms/wp-content/plugins/hello.php
