@@ -26,6 +26,7 @@ readme.txt
 # Ignore WordPress core files
 cms/wp-admin/
 cms/wp-includes/
+cms/wp-*
 # Ignore everything in the "wp-content" directory with some exceptions
 cms/wp-content/*
 !cms/wp-content/languages/
