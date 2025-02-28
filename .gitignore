@@ -14,6 +14,7 @@
 #
 # Sensible data files
 license
+license.txt
 !license/
 readme.md
 readme.html
@@ -24,12 +25,20 @@ readme.txt
 # Ignore everything in the root except the "wp-content" directory
 !cms/wp-content/
 # Ignore WordPress core files
+cms/wp-activate.php
+cms/wp-cron.php
+cms/wp-load.php
+cms/wp-mail.php
+cms/wp-login.php
+cms/wp-settings.php
+cms/wp-trackback.php
+cms/xmlrpc.php
 cms/wp-admin/
 cms/wp-includes/
 cms/wp-*
 # Ignore everything in the "wp-content" directory with some exceptions
 cms/wp-content/*
-!cms/wp-content/languages/
+cms/wp-content/languages/
 !cms/wp-content/mu-plugins/
 !cms/wp-content/plugins/
 !cms/wp-content/themes/
