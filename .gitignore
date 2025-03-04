@@ -41,7 +41,8 @@ cms/wp-content/*
 cms/wp-content/languages/
 !cms/wp-content/mu-plugins/
 !cms/wp-content/plugins/
-!cms/wp-content/themes/
+!cms/wp-content/themes/myrecovery101/
+!cms/wp-content/themes/myrecovery101/woocommerce/
 !cms/wp-content/php-error.php
 # WordPress plugins
 cms/wp-content/plugins/hello.php

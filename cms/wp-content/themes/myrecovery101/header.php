@@ -35,7 +35,7 @@
 
 <body <?php body_class() ?>>
     <header class="container <?php if(is_page_template('template-community.php')) : ?>community<?php endif; ?>">
-        <h1><a href="<?= home_url() ?>" class="logo"><?= get_bloginfo('name') ?></a></h1>
+        <div><a href="<?= home_url() ?>" class="logo"><?= get_bloginfo('name') ?></a></div>
         <?php
         wp_nav_menu([
             'theme_location'    => 'main-menu',

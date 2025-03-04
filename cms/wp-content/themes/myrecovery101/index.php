@@ -148,8 +148,8 @@ if (is_front_page()) :
         while (have_posts()) :
             the_post(); ?>
         <div class="container">
-            <h1 class="fs-3xl text-center text-teal"><?php the_title(); ?></h1>
-            <div class="col-10 m-auto">
+            <h1 class="fs-3xl text-center uppercase"><?php the_title(); ?></h1>
+            <div class="col-10 m-auto mt-40">
                 <?php the_content(); ?>
             </div>
         </div>

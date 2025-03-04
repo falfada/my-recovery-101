@@ -25,9 +25,7 @@ $title_shop = get_field('shop_title', $shop_page_id);
 
 
 ?>
-<section class="container">
 	<h1 class="text-center fs-4xl"><?= $title_shop ?></h1>
-</section>
 
 <?php
 

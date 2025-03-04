@@ -320,3 +320,26 @@ function load_more_resources_callback()
 
     wp_die();
 }
+
+/**
+ * Supporting WooCommerce
+ */
+function mytheme_add_woocommerce_support() {
+    add_theme_support( 'woocommerce' );
+    add_theme_support( 'wc-product-gallery-zoom' );
+    add_theme_support( 'wc-product-gallery-lightbox' );
+    add_theme_support( 'wc-product-gallery-slider' );
+}
+add_action( 'after_setup_theme', 'mytheme_add_woocommerce_support' );
+
+/**
+ * Override WooCommerce CSS
+ */
+add_filter( 'woocommerce_enqueue_styles', '__return_false' );
+
+/**
+ * Remove WooCommerce default title on the shop page
+ */
+add_filter('woocommerce_show_page_title', '__return_false');
+
+

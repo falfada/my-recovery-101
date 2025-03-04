@@ -27,3 +27,12 @@
 @import './pages/services';
 @import './pages/resources';
 @import './pages/community';
+
+/**
+ * WooCommerce files.
+ */
+ @import './woocommerce/woocommerce_global';
+ @import './woocommerce/shop';
+ @import './woocommerce/single-product';
+ @import './woocommerce/cart';
+ @import './woocommerce/checkout';
