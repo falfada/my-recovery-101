@@ -283,33 +283,45 @@ function load_more_resources_callback()
             $name = get_the_title();
             $categories_terms = wp_get_post_terms(get_the_ID(), 'resource_category');
             $image = get_the_post_thumbnail_url(get_the_ID(), 'full');
-            $file = get_field('file_resource'); 
-            
+            $file = get_field('file_resource');
+            $external_link = get_field('external_resource_link');
+
+            $url = '';
+
+            if ($file) {
+                $url = $file['url'];
+            } elseif ($external_link) {
+                $url = $external_link;
+            }
+
             $category_slugs = array();
             foreach ($categories_terms as $term) {
                 $category_slugs[] = $term->slug;
             }
             $categories_list = implode(',', $category_slugs); ?>
 
-            <a href="<?= esc_url($file['url']); ?>" target="_blank" class="text-black resource-item" data-categories="<?= esc_attr($categories_list); ?>">
+            <?php if ($url) : ?>
+
+            <a href="<?= esc_url($url); ?>" target="_blank" class="text-black resource-item" data-categories="<?= esc_attr($categories_list); ?>">
                 <?php if ($image) : ?>
                     <img src="<?= esc_url($image); ?>" alt="<?= esc_attr($name); ?>" class="category-img" />
                 <?php endif ?>
 
-                    <?php foreach ($categories_terms as $term) { ?>
-                        <?php
-                        $bg_category_color = get_field('color_resource_category', $term);
-                        $text_category_color = get_field('text_color_resource_category', $term);
-                        $category_icon = get_field('icon_resource_category', $term);
-                        ?>
-                        <div class="category-type mt-16" style="background-color: <?= esc_attr($bg_category_color); ?>; color: <?= esc_attr($text_category_color); ?>;">
-                            <img src="<?= esc_url($category_icon['url']); ?>" alt="">
-                            <p class="fw-semibold"><?= esc_html($term->name); ?></p>
-                        </div>
-                    <?php } ?>
+                <?php foreach ($categories_terms as $term) { ?>
+                    <?php
+                    $bg_category_color = get_field('color_resource_category', $term);
+                    $text_category_color = get_field('text_color_resource_category', $term);
+                    $category_icon = get_field('icon_resource_category', $term);
+                    ?>
+                    <div class="category-type mt-16" style="background-color: <?= esc_attr($bg_category_color); ?>; color: <?= esc_attr($text_category_color); ?>;">
+                        <img src="<?= esc_url($category_icon['url']); ?>" alt="">
+                        <p class="fw-semibold"><?= esc_html($term->name); ?></p>
+                    </div>
+                <?php } ?>
                 </div>
                 <p class="font-sm mt-8"><?= esc_html($name); ?></p>
             </a>
+            <?php endif; ?>
 <?php
         }
 
@@ -324,22 +336,21 @@ function load_more_resources_callback()
 /**
  * Supporting WooCommerce
  */
-function mytheme_add_woocommerce_support() {
-    add_theme_support( 'woocommerce' );
-    add_theme_support( 'wc-product-gallery-zoom' );
-    add_theme_support( 'wc-product-gallery-lightbox' );
-    add_theme_support( 'wc-product-gallery-slider' );
+function mytheme_add_woocommerce_support()
+{
+    add_theme_support('woocommerce');
+    add_theme_support('wc-product-gallery-zoom');
+    add_theme_support('wc-product-gallery-lightbox');
+    add_theme_support('wc-product-gallery-slider');
 }
-add_action( 'after_setup_theme', 'mytheme_add_woocommerce_support' );
+add_action('after_setup_theme', 'mytheme_add_woocommerce_support');
 
 /**
  * Override WooCommerce CSS
  */
-add_filter( 'woocommerce_enqueue_styles', '__return_false' );
+add_filter('woocommerce_enqueue_styles', '__return_false');
 
 /**
  * Remove WooCommerce default title on the shop page
  */
 add_filter('woocommerce_show_page_title', '__return_false');
-
-
